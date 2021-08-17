@@ -2,7 +2,7 @@
 <html class="no-js">
 
 <head>
-	<title>Okorner - HTML Template</title>
+	<title>The Red Rooster Academy</title>
 	<meta charset="utf-8">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -126,40 +126,6 @@
 				</section>
 			</div>
 
-
-			<section class="s-pb-40 s-pt-0 s-py-lg-50 c-my-40 c-my-lg-15 ds contact-info">
-				<div class="container">
-					<div class="row">
-						<div class="col-12 col-md-4 text-center">
-							<div class="icon-box icon-absolute text-center">
-								<div class="icon-styled">
-									<i class="fa fa-phone"></i>
-								</div>
-								<span>APPELEZ-NOUS</span>
-								<h5>+32 478 677 355</h5>
-							</div>
-						</div>
-						<div class="col-12 col-md-4 text-center">
-							<div class="icon-box icon-absolute text-center">
-								<div class="icon-styled">
-									<i class="fa fa-map-marker"></i>
-								</div>
-								<span>RUE CENTRALE 71</span>
-								<h5>PIRONCHAMPS, 6240 - BELGIQUE</h5>
-							</div>
-						</div>
-						<div class="col-12 col-md-4 text-center">
-							<div class="icon-box icon-absolute text-center">
-								<div class="icon-styled">
-									<i class="fa fa-clock-o"></i>
-								</div>
-								<span>HEURES D'OUVERTURE</span>
-								<h5>VERS NOTRE PLANNING &rarr;</h5>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
 			<section id="about" class="ds s-py-60 s-py-md-90 s-overlay mobile-overlay about-section">
 				<div class="container">
 					<div class="row d-flex justify-content-end">
@@ -505,72 +471,219 @@
 				</div>
 			</section>
 
-			<section id="form" class="ds s-py-60 s-py-md-90 c-mb-20 c-gutter-20 form-section">
+			<!-- Schedule  -->
+			<section id="schedule" class=" ds s-py-60 s-py-md-80">
 				<div class="container">
 					<div class="row">
 						<div class="divider-70 d-none d-xl-block"></div>
-						<div class="col-12">
-							<h3 class="special-heading text-center">RECEVEZ VOTRE LEÇON OFFERTE</h3>
-							<div class="divider-60 d-none d-xl-block"></div>
-							<div class="divider-40 hidden-above-md"></div>
-							<form action="#">
-								<div class="row">
-									<div class="col-xs-12 col-md-4">
-										<div class="form-group">
-											<input class="form-control" type="text" name="text_1fcfb46" placeholder="Full Name" value=""
-												required="required">
-										</div>
-									</div>
-									<div class="col-xs-12 col-md-4">
-										<div class="form-group">
-											<input class="form-control" type="text" name="text_42598d5" placeholder="Phone Number" value=""
-												required="required">
-										</div>
-									</div>
-									<div class="col-xs-12 col-md-2">
-										<div class="form-group">
-											<div class="field-date">
-												<select class="form-control" name="date_time_42a77ed" required="required">
-													<option value="">Date</option>
-													<option value="Date">Date</option>
-													<option value="Date">Date</option>
-												</select>
-											</div>
-										</div>
-									</div>
-									<div class="col-xs-12 col-md-2">
-										<div class="form-group">
-											<div class="field-date">
-												<select class="form-control" name="date_time_b63914d" required="required">
-													<option value="">Time</option>
-													<option value="Time">Time</option>
-													<option value="Time">Time</option>
-												</select>
-											</div>
-										</div>
+						<div class="col-lg-12">
+							<div class="row justify-content-center">
+								<div class="col-md-10 col-xl-8">
+									<div id="timetable_filter" class="filters gallery-filters small-text text-lg-right">
+										<a data-filter="all" href="#" class="selected">All</a>
+										<a data-filter=".Jiu-jitsu-Adulte" href="#">Jiu-jitsu Adulte</a>
+										<a data-filter=".Jiu-jitsu-Enfant" href="#">Jiu-jitsu Enfant</a>
+										<a data-filter=".Grappling" href="#">Grappling</a>
+										<a data-filter=".Judo" href="#">Judo</a>
 									</div>
 								</div>
-								<div class="row">
-									<div class="col-12">
-										<div class="form-group">
-											<textarea class="form-control" rows="5" name="textarea_edfe99b" placeholder="Your Message"
-												required="required"></textarea>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-12 text-center">
-										<button class="btn btn-maincolor" type="submit">get pass now</button>
-										<button class="btn btn-outline-maincolor" type="submit">our contacts</button>
-									</div>
-								</div>
-							</form>
+							</div>
 						</div>
-						<div class="divider-40 d-none d-xl-block"></div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="table-responsive">
+								<table class="table_template darklinks" id="timetable">
+									<thead>
+										<tr>
+											<th></th>
+											<th>Monday</th>
+											<th>Tuesday</th>
+											<th>Wednesday</th>
+											<th>Thursday</th>
+											<th>Friday</th>
+										</tr>
+									</thead>
+
+									<tbody>
+
+										<tr>
+											<th>18:30 - 19:30</th>
+											<td>
+												<a class="Jiu-jitsu-Enfant">
+													Jiu-jitsu Enfant <span>Sébastien FALABRETTI</span>
+												</a>
+											</td>
+
+											<td>
+												<a href="event-single-left.html" class="kids-karate">
+													Kids Karate <span>randal schwartz</span>
+												</a>
+											</td>
+
+											<td>
+												<a href="event-single-left.html" class="kick-boxing">
+													Kick Boxing <span>Brett Hawkins</span>
+												</a>
+											</td>
+
+											<td>
+												<a href="event-single-left.html" class="kung-fu">
+													Kung-Fu <span>Garrett Farmer</span>
+												</a>
+											</td>
+
+											<td>
+												<a href="event-single-left.html" class="jiu-jitsu">
+													Jiu-Jitsu <span>Erik Warner</span>
+												</a>
+											</td>
+										</tr>
+
+										<tr>
+
+											<th>15:00 - 16:00</th>
+
+											<td>
+
+												<a href="event-single-left.html" class="kick-boxing">
+													Kick Boxing <span>Brett Hawkins</span>
+												</a>
+
+											</td>
+
+											<td>
+
+												<a href="event-single-left.html" class="jiu-jitsu">
+													Jiu-Jitsu <span>Erik Warner</span>
+												</a>
+
+											</td>
+
+											<td>
+
+												<a href="event-single-left.html" class="adult-karate">
+													Adult Karate <span>Ralph Lawson</span>
+												</a>
+
+											</td>
+
+											<td>
+
+												<a href="event-single-left.html" class="kung-fu">
+													Kung-Fu <span>Garrett Farmer</span>
+												</a>
+
+											</td>
+
+											<td>
+
+												<a href="event-single-left.html" class="teen-karate">
+													Teen Karate <span>Mark Lawrence</span>
+												</a>
+
+											</td>
+
+										</tr>
+
+										<tr>
+
+											<th>16:00 - 17:00</th>
+
+											<td>
+
+												<a href="event-single-left.html" class="kids-karate">
+													Kids Karate <span>randal schwartz</span>
+												</a>
+
+											</td>
+
+											<td>
+
+												<a href="event-single-left.html" class="adult-karate">
+													Adult Karate <span>Ralph Lawson</span>
+												</a>
+											</td>
+
+											<td>
+
+												<a href="event-single-left.html" class="kick-boxing">
+													Kick Boxing <span>Brett Hawkins</span>
+												</a>
+
+											</td>
+
+											<td>
+
+												<a href="event-single-left.html" class="kung-fu">
+													Kung-Fu <span>Garrett Farmer</span>
+												</a>
+
+											</td>
+
+											<td>
+												<a href="event-single-left.html" class="kick-boxing">
+													Kick Boxing <span>Brett Hawkins</span>
+												</a>
+											</td>
+
+										</tr>
+
+										<tr>
+
+											<th>17:00 - 18:00</th>
+
+											<td>
+
+												<a href="event-single-left.html" class="jiu-jitsu">
+													Jiu-Jitsu <span>Erik Warner</span>
+												</a>
+
+											</td>
+
+											<td>
+
+												<a href="event-single-left.html" class="kick-boxing">
+													Kick Boxing <span>Brett Hawkins</span>
+												</a>
+
+											</td>
+
+											<td>
+
+												<a href="event-single-left.html" class="teen-karate">
+													Teen Karate <span>Mark Lawrence</span>
+												</a>
+
+											</td>
+
+											<td>
+
+												<a href="event-single-left.html" class="kung-fu">
+													Kung-Fu <span>Garrett Farmer</span>
+												</a>
+
+											</td>
+
+											<td>
+
+												<a href="event-single-left.html" class="adult-karate">
+													Adult Karate <span>Ralph Lawson</span>
+												</a>
+
+											</td>
+
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="divider-70 d-none d-xl-block"></div>
 					</div>
 				</div>
 			</section>
 
+			<!-- FAQ -->
 			<section id="faq" class="ds ms faq-section container-px-0">
 				<div class="container-fluid">
 					<div class="row">
@@ -677,609 +790,79 @@
 				</div>
 			</section>
 
-			<!-- Schedule  -->
-			<section id="schedule" class=" ds s-py-60 s-py-md-80">
+			<!-- Lecon offter voucher -->
+			<section id="form" class="ds s-py-60 s-py-md-90 c-mb-20 c-gutter-20 form-section">
 				<div class="container">
 					<div class="row">
 						<div class="divider-70 d-none d-xl-block"></div>
-						<div class="col-lg-12">
-							<div class="row justify-content-center">
-								<div class="col-md-10 col-xl-8">
-									<div id="timetable_filter" class="filters gallery-filters small-text text-lg-right">
-										<a data-filter="all" href="#" class="selected">All</a>
-										<a data-filter=".kids-karate" href="#">kids karate</a>
-										<a data-filter=".kick-boxing" href="#">kick boxing</a>
-										<a data-filter=".adult-karate" href="#">adult karate</a>
-										<a data-filter=".jiu-jitsu" href="#">jiu-jitsu</a>
-										<a data-filter=".teen-karate" href="#">teen karate</a>
-										<a data-filter=".kung-fu" href="#">kung fu</a>
+						<div class="col-12">
+							<h3 class="special-heading text-center">RECEVEZ VOTRE LEÇON OFFERTE</h3>
+							<div class="divider-60 d-none d-xl-block"></div>
+							<div class="divider-40 hidden-above-md"></div>
+							<form action="#">
+								<div class="row">
+									<div class="col-xs-12 col-md-4">
+										<div class="form-group">
+											<input class="form-control" type="text" name="text_1fcfb46" placeholder="Full Name" value=""
+												required="required">
+										</div>
+									</div>
+									<div class="col-xs-12 col-md-4">
+										<div class="form-group">
+											<input class="form-control" type="text" name="text_42598d5" placeholder="Phone Number" value=""
+												required="required">
+										</div>
+									</div>
+									<div class="col-xs-12 col-md-2">
+										<div class="form-group">
+											<div class="field-date">
+												<select class="form-control" name="date_time_42a77ed" required="required">
+													<option value="">Date</option>
+													<option value="Date">Date</option>
+													<option value="Date">Date</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-12 col-md-2">
+										<div class="form-group">
+											<div class="field-date">
+												<select class="form-control" name="date_time_b63914d" required="required">
+													<option value="">Time</option>
+													<option value="Time">Time</option>
+													<option value="Time">Time</option>
+												</select>
+											</div>
+										</div>
 									</div>
 								</div>
-							</div>
+								<div class="row">
+									<div class="col-12">
+										<div class="form-group">
+											<textarea class="form-control" rows="5" name="textarea_edfe99b" placeholder="Your Message"
+												required="required"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12 text-center">
+										<button class="btn btn-maincolor" type="submit">get pass now</button>
+										<button class="btn btn-outline-maincolor" type="submit">our contacts</button>
+									</div>
+								</div>
+							</form>
 						</div>
+						<div class="divider-40 d-none d-xl-block"></div>
 					</div>
-					<div class="row">
-						<div class="col-sm-12">
-							<div class="table-responsive">
-								<table class="table_template darklinks" id="timetable">
-									<thead>
-										<tr>
-											<th></th>
-											<th>Sunday</th>
-											<th>Monday</th>
-											<th>Tuesday</th>
-											<th>Wednesday</th>
-											<th>Thursday</th>
-											<th>Friday</th>
-											<th>Saturday</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<th>8:00 - 9:00</th>
-											<td>
-												<a href="event-single-left.html" class="kids-karate">
-													Kids Karate <span>randal schwartz</span>
-												</a>
-											</td>
-											<td>
-												<a href="event-single-left.html" class="kick-boxing">
-													Kick Boxing <span>Brett Hawkins</span>
-												</a>
-											</td>
-											<td>
-												<a href="event-single-left.html" class="adult-karate">
-													Adult Karate <span>Ralph Lawson</span>
-												</a>
-											</td>
-
-											<td>
-												<a href="event-single-left.html" class="jiu-jitsu">
-													Jiu-Jitsu <span>Erik Warner</span>
-												</a>
-											</td>
-											<td>
-												<a href="event-single-left.html" class="teen-karate">
-													Teen Karate <span>Mark Lawrence</span>
-												</a>
-											</td>
-											<td>
-												<a href="event-single-left.html" class="kung-fu">
-													Kung-Fu <span>Garrett Farmer</span>
-												</a>
-											</td>
-											<td>
-
-											</td>
-										</tr>
-										<tr>
-											<th>9:00 - 10:00</th>
-											<td>
-												<a href="event-single-left.html" class="teen-karate">
-													Teen Karate <span>Mark Lawrence</span>
-												</a>
-											</td>
-											<td>
-												<a href="event-single-left.html" class="kung-fu">
-													Kung-Fu <span>Garrett Farmer</span>
-												</a>
-											</td>
-											<td>
-												<a href="event-single-left.html" class="kids-karate">
-													Kids Karate <span>randal schwartz</span>
-												</a>
-											</td>
-											<td>
-												<a href="event-single-left.html" class="kick-boxing">
-													Kick Boxing <span>Brett Hawkins</span>
-												</a>
-											</td>
-											<td>
-												<a href="event-single-left.html" class="adult-karate">
-													Adult Karate <span>Ralph Lawson</span>
-												</a>
-											</td>
-											<td>
-
-											</td>
-											<td>
-												<a href="event-single-left.html" class="jiu-jitsu">
-													Jiu-Jitsu <span>Erik Warner</span>
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<th>10:00 - 11:00</th>
-											<td>
-												<a href="event-single-left.html" class="kids-karate">
-													Kids Karate <span>randal schwartz</span>
-												</a>
-											</td>
-											<td>
-												<a href="event-single-left.html" class="kick-boxing">
-													Kick Boxing <span>Brett Hawkins</span>
-												</a>
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="teen-karate">
-													Teen Karate <span>Mark Lawrence</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="jiu-jitsu">
-													Jiu-Jitsu <span>Erik Warner</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="kids-karate">
-													Kids Karate <span>randal schwartz</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="kung-fu">
-													Kung-Fu <span>Garrett Farmer</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="adult-karate">
-													Adult Karate <span>Ralph Lawson</span>
-												</a>
-
-											</td>
-
-										</tr>
-
-
-										<tr>
-
-											<th>11:00 - 12:00</th>
-
-											<td>
-
-												<a href="event-single-left.html" class="kung-fu">
-													Kung-Fu <span>Garrett Farmer</span>
-												</a>
-
-											</td>
-
-											<td>
-
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="kick-boxing">
-													Kick Boxing <span>Brett Hawkins</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="kids-karate">
-													Kids Karate <span>randal schwartz</span>
-												</a>
-
-											</td>
-
-											<td>
-												<a href="event-single-left.html" class="teen-karate">
-													Teen Karate <span>Mark Lawrence</span>
-												</a>
-
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="adult-karate">
-													Adult Karate <span>Ralph Lawson</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="jiu-jitsu">
-													Jiu-Jitsu <span>Erik Warner</span>
-												</a>
-
-											</td>
-
-										</tr>
-
-
-										<tr>
-
-											<th>12:00 - 13:00</th>
-
-											<td>
-
-												<a href="event-single-left.html" class="kick-boxing">
-													Kick Boxing <span>Brett Hawkins</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="kids-karate">
-													Kids Karate <span>randal schwartz</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="kung-fu">
-													Kung-Fu <span>Garrett Farmer</span>
-												</a>
-
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="adult-karate">
-													Adult Karate <span>Ralph Lawson</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="jiu-jitsu">
-													Jiu-Jitsu <span>Erik Warner</span>
-												</a>
-
-											</td>
-
-											<td>
-
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="teen-karate">
-													Teen Karate <span>Mark Lawrence</span>
-												</a>
-
-											</td>
-
-										</tr>
-
-
-										<tr>
-
-											<th>13:00 - 14:00</th>
-
-											<td>
-
-												<a href="event-single-left.html" class="adult-karate">
-													Adult Karate <span>Ralph Lawson</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="kung-fu">
-													Kung-Fu <span>Garrett Farmer</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="jiu-jitsu">
-													Jiu-Jitsu <span>Erik Warner</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="teen-karate">
-													Teen Karate <span>Mark Lawrence</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="kids-karate">
-													Kids Karate <span>randal schwartz</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="kick-boxing">
-													Kick Boxing <span>Brett Hawkins</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="kung-fu">
-													Kung-Fu <span>Garrett Farmer</span>
-												</a>
-
-											</td>
-
-										</tr>
-
-
-										<tr>
-
-											<th>14:00 - 15:00</th>
-
-											<td>
-
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="kids-karate">
-													Kids Karate <span>randal schwartz</span>
-												</a>
-
-											</td>
-
-											<td>
-
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="kick-boxing">
-													Kick Boxing <span>Brett Hawkins</span>
-												</a>
-
-											</td>
-
-											<td>
-
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="kung-fu">
-													Kung-Fu <span>Garrett Farmer</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="jiu-jitsu">
-													Jiu-Jitsu <span>Erik Warner</span>
-												</a>
-
-											</td>
-
-										</tr>
-
-
-										<tr>
-
-											<th>15:00 - 16:00</th>
-
-											<td>
-
-												<a href="event-single-left.html" class="kick-boxing">
-													Kick Boxing <span>Brett Hawkins</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="jiu-jitsu">
-													Jiu-Jitsu <span>Erik Warner</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="adult-karate">
-													Adult Karate <span>Ralph Lawson</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="kung-fu">
-													Kung-Fu <span>Garrett Farmer</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="teen-karate">
-													Teen Karate <span>Mark Lawrence</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="adult-karate">
-													Adult Karate <span>Ralph Lawson</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="kids-karate">
-													Kids Karate <span>randal schwartz</span>
-												</a>
-
-											</td>
-
-										</tr>
-
-
-										<tr>
-
-											<th>16:00 - 17:00</th>
-
-											<td>
-
-												<a href="event-single-left.html" class="kids-karate">
-													Kids Karate <span>randal schwartz</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="adult-karate">
-													Adult Karate <span>Ralph Lawson</span>
-												</a>
-											</td>
-
-											<td>
-
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="jiu-jitsu">
-													Jiu-Jitsu <span>Erik Warner</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="kick-boxing">
-													Kick Boxing <span>Brett Hawkins</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="kung-fu">
-													Kung-Fu <span>Garrett Farmer</span>
-												</a>
-
-											</td>
-
-											<td>
-												<a href="event-single-left.html" class="kick-boxing">
-													Kick Boxing <span>Brett Hawkins</span>
-												</a>
-											</td>
-
-										</tr>
-
-
-										<tr>
-
-											<th>17:00 - 18:00</th>
-
-											<td>
-
-												<a href="event-single-left.html" class="jiu-jitsu">
-													Jiu-Jitsu <span>Erik Warner</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="kick-boxing">
-													Kick Boxing <span>Brett Hawkins</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="teen-karate">
-													Teen Karate <span>Mark Lawrence</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="kung-fu">
-													Kung-Fu <span>Garrett Farmer</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="adult-karate">
-													Adult Karate <span>Ralph Lawson</span>
-												</a>
-
-											</td>
-
-											<td>
-
-												<a href="event-single-left.html" class="kids-karate">
-													Kids Karate <span>randal schwartz</span>
-												</a>
-
-											</td>
-
-											<td>
-												<a href="event-single-left.html" class="jiu-jitsu">
-													Jiu-Jitsu <span>Erik Warner</span>
-												</a>
-											</td>
-
-										</tr>
-									</tbody>
-
-								</table>
-
-							</div>
-
-						</div>
-						<div class="divider-70 d-none d-xl-block"></div>
-					</div>
-
 				</div>
-
 			</section>
 
+			<!-- Google Maps -->
 			<section class="ds ms page_map main-map" data-draggable="false" data-scrollwheel="false">
 
 				<div class="marker">
-					<div class="marker-address">sydney, australia, Liverpool street, 66</div>
-					<div class="marker-title">Reach Us</div>
+					<div class="marker-address">Rue Centrale 71, Pironchamps</div>
+					<div class="marker-title">Contactez-nous</div>
 					<div class="marker-description">
 
 						<ul class="list-unstyled">
@@ -1290,7 +873,7 @@
 									</span>
 
 									<span>
-										Sydney, Australia, Liverpool street, 66
+										Rue Centrale 71, Pironchamps, 6240, Belgique
 									</span>
 								</span>
 							</li>
@@ -1334,8 +917,8 @@
 								<div class="icon-styled">
 									<i class="color-main fa fa-phone"></i>
 								</div>
-								<span>CALL US 24/7</span>
-								<h5>+7-85-569-123</h5>
+								<span>APPELEZ-NOUS</span>
+								<h5>+32 478 677 355</h5>
 							</div>
 						</div>
 						<div class="col-12 col-md-4 text-center">
@@ -1343,8 +926,8 @@
 								<div class="icon-styled">
 									<i class="color-main fa fa-map-marker"></i>
 								</div>
-								<span>SEASON STREET 45/2</span>
-								<h5>LOS ANGELES, INC - 4502</h5>
+								<span>RUE CENTRALE 71</span>
+								<h5>PIRONCHAMPS, 6240 - BELGIQUE</h5>
 							</div>
 						</div>
 						<div class="col-12 col-md-4 text-center">
@@ -1352,8 +935,8 @@
 								<div class="icon-styled">
 									<i class="color-main fa fa-clock-o"></i>
 								</div>
-								<span>WORKING HOURS</span>
-								<h5>DAILY: 9AM - 8PM</h5>
+								<span>HEURES D'OUVERTURE</span>
+								<h5><a href="#schedule">VERS NOTRE PLANNING &rarr;</a></h5>
 							</div>
 						</div>
 					</div>
@@ -1462,7 +1045,7 @@
 	<!-- Google Map Script -->
 
 	<script type="text/javascript"
-		src="https://maps.googleapis.com/maps/api/js?callback=templateInitGoogleMap&key=AIzaSyC0pr5xCHpaTGv12l73IExOHDJisBP2FK4"></script>
+		src="https://maps.googleapis.com/maps/api/js?callback=templateInitGoogleMap&key=AIzaSyACm8HFLAqb-I2TmanFk1vIeueg5_pX9n0"></script>
 
 </body>
 
