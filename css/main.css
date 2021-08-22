@@ -7614,11 +7614,11 @@ body.boxed {
 	}
 }
 
-@media (min-width: 1400px) {
+/* @media (min-width: 1400px) {
 	.s-overlay.mobile-overlay:before {
 		display: none;
 	}
-}
+} */
 
 .about-section a:not(.btn).about-link {
 	color: #e43d4e;
@@ -14831,11 +14831,11 @@ a img.aligncenter {
 	}
 }
 
-@media (min-width: 1200px) and (min-width: 1500px) {
+/* @media (min-width: 1200px) and (min-width: 1500px) {
 	.sf-menu > li > a {
 		margin: 0 25px;
 	}
-}
+} */
 
 @media (min-width: 1200px) {
 	.sf-menu > li > a:hover,
@@ -17768,7 +17768,7 @@ img.absolute_image {
 }
 
 .about-section {
-	background-image: url("../images/parallax/kimura_background.jpg");
+	background-image: url("../images/parallax/grappling.jpg");
 	background-position: 50% -10%;
 	background-repeat: no-repeat;
 	background-size: cover;
