@@ -412,7 +412,7 @@ pre {
 
 .small-text {
 	font-family: "Oswald", sans-serif !important;
-	font-size: 12px;
+	/* font-size: 12px; */
 	font-style: normal;
 	font-weight: 600;
 	font-weight: 400 !important;
@@ -7859,12 +7859,12 @@ body.boxed {
 
 .vertical-item.content-padding .item-content .small-text {
 	font-family: "Oswald", sans-serif;
-	font-size: 12px;
+	font-size: 1.5em;
 	font-weight: 500;
 	letter-spacing: 0.05em;
 	line-height: 1;
 	margin-bottom: 18px;
-	margin-top: 7px;
+	margin-top: 30px;
 }
 
 .vertical-item.content-padding .item-content p {
