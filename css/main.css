@@ -17769,7 +17769,7 @@ img.absolute_image {
 
 .about-section {
 	background-image: url("../images/parallax/grappling.jpg");
-	background-position: 50% -10%;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
