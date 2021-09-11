@@ -11112,7 +11112,7 @@ h3.small {
 .pricing-plan {
 	background-color: #0a0d1b;
 	margin-bottom: 50px;
-	padding: 40px 40px 10px;
+	padding: 40px 40px;
 	text-align: center;
 }
 
@@ -11156,7 +11156,7 @@ h3.small {
 
 @media (min-width: 1200px) {
 	.pricing-plan {
-		padding: 57px 60px 10px;
+		padding: 57px 60px;
 	}
 
 	.pricing-plan [class*='bg-'] {
