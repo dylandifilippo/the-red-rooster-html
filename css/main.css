@@ -2244,16 +2244,16 @@ html[xmlns] .slides {
 }
 
 .flexslider:hover .flex-prev {
-	opacity: 0.7;
+	/* opacity: 0.7; */
 }
 
 .flexslider:hover .flex-next {
-	opacity: 0.7;
+	/* opacity: 0.7; */
 }
 
 .flexslider:hover .flex-next:hover,
 .flexslider:hover .flex-prev:hover {
-	opacity: 1;
+	/* opacity: 1; */
 }
 
 .flex-direction-nav .flex-disabled {
@@ -8134,7 +8134,7 @@ blockquote.vertical-item .small-text {
 }
 
 .programs.program-section .vertical-item .item-content {
-	padding: 50px 55px 40px;
+	padding: 33px 55px 40px;
 }
 
 @media (max-width: 768px) {
@@ -16255,7 +16255,7 @@ body.active-side-header.slide-right .page_header_side {
 .page_slider .flex-direction-nav .flex-prev {
 	color: #fff;
 	left: 9%;
-	opacity: 0.5;
+	/* opacity: 0.5; */
 }
 
 @media (max-width: 1550px) {
@@ -16281,7 +16281,7 @@ body.active-side-header.slide-right .page_header_side {
 
 .page_slider .flex-direction-nav .flex-next {
 	color: #fff;
-	opacity: 0.5;
+	/* opacity: 0.5; */
 	right: 9%;
 }
 
