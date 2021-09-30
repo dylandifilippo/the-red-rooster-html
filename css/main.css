@@ -15504,7 +15504,7 @@ a img.aligncenter {
 .page_header.affix {
 	box-shadow: 0 2px 15px 0 rgba(100, 100, 100, 0.05);
 	opacity: 0.98;
-	position: fixed !important;
+	/* position: fixed !important; */
 	z-index: 1001;
 }
 
