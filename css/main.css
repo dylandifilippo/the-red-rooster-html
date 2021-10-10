@@ -7848,7 +7848,7 @@ body.boxed {
 }
 
 .vertical-item.content-padding .item-content {
-	padding: 40px 40px;
+	padding: 20px 40px;
 }
 
 .vertical-item.content-padding .item-content h5 {
@@ -7953,7 +7953,7 @@ body.boxed {
 }
 
 .item-media img {
-	width: 100%;
+	width: 70vw;
 }
 
 .item-media.cover-image {
@@ -10946,7 +10946,7 @@ span.muted-bg {
 ** Special Heading
 */
 .special-heading {
-	font-size: 38px;
+	font-size: clamp(22px, 6vw, 38px);
 	font-weight: 400;
 	letter-spacing: 0.08em;
 	line-height: 1;
@@ -11123,7 +11123,7 @@ h3.small {
 	font-size: 20px;
 	justify-content: center;
 	line-height: 0.7;
-	margin: 60px 0 10px;
+	margin: 40px 0 0px;
 }
 
 .pricing-plan .price-wrap[class*='bg-'] {
@@ -11133,7 +11133,7 @@ h3.small {
 }
 
 .pricing-plan .price-wrap .plan-price {
-	font-size: 62px;
+	font-size: clamp(32px, 13vw, 62px);
 	font-weight: 900;
 }
 
