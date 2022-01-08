@@ -17659,7 +17659,7 @@ img.absolute_image {
 
 .contact-info.cover-background,
 .contact-info.s-parallax {
-	background: url("../images/parallax/footer_bg.jpg") no-repeat fixed center;
+	/* background: url("../images/parallax/footer_bg.jpg") no-repeat fixed center; */
 	background-size: cover;
 }
 
@@ -17775,7 +17775,7 @@ img.absolute_image {
 }
 
 .ds.coming-soon {
-	background-image: url("../images/parallax/footer_bg.jpg");
+	/* background-image: url("../images/parallax/footer_bg.jpg"); */
 }
 
 .ds.coming-soon input {
@@ -17863,7 +17863,7 @@ img.absolute_image {
 }
 
 .page_footer.s-parallax {
-	background-image: url("../images/parallax/footer_bg.jpg");
+	/* background-image: url("../images/parallax/footer_bg.jpg"); */
 }
 
 @media (max-width: 1200px) {
