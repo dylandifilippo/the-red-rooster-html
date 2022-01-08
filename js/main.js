@@ -897,29 +897,29 @@ function documentReadyInit() {
 	}
 
 	// init timetable
-	var $timetable = $('#timetable');
-	if ($timetable.length) {
-		// bind filter click
-		$('#timetable_filter').on( 'click', 'a', function( e ) {
-			e.preventDefault();
-			e.stopPropagation();
-			var $thisA = $(this);
-			if ( $thisA.hasClass('selected') ) {
-				// return false;
-				return;
-			}
-			var selector = $thisA.attr('data-filter');
-			$timetable
-				.find('tbody td')
-				.removeClass('current')
-				.end()
-				.find(selector)
-				.closest('td')
-				.addClass('current');
-			$thisA.closest('.filters').find('a').removeClass('selected');
-			$thisA.addClass('selected');
-		});
-	}
+	// var $timetable = $('#timetable');
+	// if ($timetable.length) {
+	// 	// bind filter click
+	// 	$('#timetable_filter').on( 'click', 'a', function( e ) {
+	// 		e.preventDefault();
+	// 		e.stopPropagation();
+	// 		var $thisA = $(this);
+	// 		if ( $thisA.hasClass('selected') ) {
+	// 			// return false;
+	// 			return;
+	// 		}
+	// 		var selector = $thisA.attr('data-filter');
+	// 		$timetable
+	// 			.find('tbody td')
+	// 			.removeClass('current')
+	// 			.end()
+	// 			.find(selector)
+	// 			.closest('td')
+	// 			.addClass('current');
+	// 		$thisA.closest('.filters').find('a').removeClass('selected');
+	// 		$thisA.addClass('selected');
+	// 	});
+	// }
 
 }
 

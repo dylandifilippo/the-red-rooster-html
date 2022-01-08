@@ -3287,7 +3287,7 @@ a.pswp__share--download:hover {
 }
 
 #timetable thead th:first-child {
-	background-color: #13182a;
+	/* background-color: #13182a; */
 }
 
 #timetable thead th {
@@ -3295,7 +3295,7 @@ a.pswp__share--download:hover {
 	border: 1px solid #3f4455;
 	color: #fff;
 	height: 50px;
-	padding: 0;
+	padding: 17px;
 	width: 147px;
 }
 
@@ -9311,6 +9311,7 @@ blockquote.vertical-item .small-text {
 .ds #timetable tbody th,
 .ds #timetable tbody td {
 	border-color: #3f4455;
+	padding: 14px;
 }
 
 .ds #isotope_filters a,
