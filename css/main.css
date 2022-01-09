@@ -1677,9 +1677,9 @@ progressbar*/
 	-webkit-touch-callout: none;
 }
 
-.owl-carousel .owl-item .box-shadow {
+/* .owl-carousel .owl-item .box-shadow {
 	height: 100%;
-}
+} */
 
 .owl-carousel .owl-item img {
 	-webkit-transform-style: preserve-3d;
