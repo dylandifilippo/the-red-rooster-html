@@ -27,7 +27,7 @@
     "instructors": { "number": "Nº 03", "title": "The Instructors" },
     "schedule": { "number": "Nº 04", "title": "The Schedule" },
     "faq": { "number": "Nº 05", "title": "Frequently Asked Questions" },
-    "pricing": { "number": "Nº 06", "title": "The Rates" },
+    "pricing": { "number": "Nº 06", "title": "Pricing" },
     "contact": { "number": "Nº 07", "title": "Contact" }
   },
   "about": {

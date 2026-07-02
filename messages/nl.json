@@ -15,7 +15,7 @@
   },
   "hero": {
     "location": "Pironchamps · Charleroi",
-    "headline": "De zachte kunst, aangeleerd met <em>discipline</em> en gezelligheid.",
+    "headline": "De zachte kunst, onderwezen met <em>discipline</em> en gezelligheid.",
     "sub": "Van Hélio Gracie tot Flavio Behring, tot op de tatami's van Pironchamps — één lijn, één methode, één familie.",
     "photoTag": "Methode Flavio Behring",
     "ctaPrimary": "Boek een proefles",
@@ -59,7 +59,7 @@
       "name": "Pierre",
       "role": "Professor BJJ & Grappling",
       "creds": [
-        "Zwarte band (1e dan) Braziliaans Jiu-Jitsu onder Grootmeester Flavio Behring"
+        "Zwarte band (1e graad) Braziliaans Jiu-Jitsu onder Grootmeester Flavio Behring"
       ]
     },
     "sebastien": {
@@ -98,7 +98,7 @@
       },
       "women": {
         "question": "Hebben jullie lessen speciaal voor vrouwen?",
-        "answer": "Op aanvraag organiseren we zelfverdedigingsworkshops voor vrouwen. Deze les is geschikt voor vrouwen (13 jaar en ouder) van elk fitnessniveau en biedt een kennismaking met praktische basisvaardigheden in zelfverdediging."
+        "answer": "Op aanvraag organiseren we zelfverdedigingsworkshops voor vrouwen. Deze les is geschikt voor vrouwen (13 jaar en ouder), ongeacht hun conditie, en biedt een kennismaking met praktische basisvaardigheden in zelfverdediging."
       },
       "kids-age": {
         "question": "Op welke leeftijd kunnen kinderen starten met Braziliaans Jiu-Jitsu?",
@@ -114,7 +114,7 @@
       },
       "protection": {
         "question": "Heb ik beschermende uitrusting nodig?",
-        "answer": "Sommige leerlingen dragen een bitje tijdens het rollen. Dat is echter volledig jouw eigen keuze."
+        "answer": "Sommige leerlingen dragen een bitje tijdens het rollen. Maar dat bepaal je helemaal zelf."
       },
       "other-academies": {
         "question": "Verwelkomen jullie leerlingen van andere academies?",
@@ -131,14 +131,14 @@
     "kids": { "title": "Kinderen — BJJ" },
     "cards": {
       "single": "Losse les",
-      "card10": "Kaart 10 lessen",
+      "card10": "10-lessenkaart",
       "monthly": "1 maand"
     },
     "currency": "€"
   },
   "contact": {
     "callUs": "Bel ons",
-    "whatsapp": "Schrijf ons op WhatsApp",
+    "whatsapp": "Stuur ons een bericht op WhatsApp",
     "addressLabel": "De academie",
     "mapCta": "Bekijk de kaart",
     "mapTitle": "The Red Rooster Academy op Google Maps",
