@@ -35,7 +35,7 @@ export function Hero() {
               height={1920}
               priority
               sizes="(min-width: 1024px) 55vw, 92vw"
-              className="hero-image h-[115%] w-full object-cover"
+              className="hero-image absolute left-0 -top-[17%] h-[120%] w-full object-cover"
             />
           </div>
         </div>

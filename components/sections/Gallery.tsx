@@ -39,7 +39,14 @@ export function Gallery() {
               delay={i * 0.06}
               className={`relative overflow-hidden ${spanClass(photo.span)}`}
             >
-              <Image src={photo.src} alt={alts[i]} fill sizes={sizesFor(photo.span)} className="object-cover" />
+              <Image
+                src={photo.src}
+                alt={alts[i]}
+                fill
+                sizes={sizesFor(photo.span)}
+                className="object-cover"
+                style={photo.objectPosition ? { objectPosition: photo.objectPosition } : undefined}
+              />
             </Reveal>
           ))}
         </div>

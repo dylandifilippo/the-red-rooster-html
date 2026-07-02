@@ -46,4 +46,10 @@ export interface PricingGroup {
 export interface GalleryPhoto {
   src: string
   span: 1 | 2 | 'lg-2'
+  /**
+   * Optional CSS `object-position` override (e.g. '50% 20%') for photos
+   * whose subject is cropped out by the default center-crop under the
+   * fixed 300px/44vw row heights. Applied via the Image `style` prop.
+   */
+  objectPosition?: string
 }

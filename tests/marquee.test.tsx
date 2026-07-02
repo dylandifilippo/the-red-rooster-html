@@ -16,7 +16,7 @@ describe('Marquee', () => {
     expect(wrapper).toHaveAttribute('aria-hidden', 'true')
   })
 
-  it('renders each discipline name twice (duplicated track for the loop)', () => {
+  it('renders each discipline name six times (2 halves x 3 reps, duplicated track for the loop)', () => {
     render(
       <NextIntlClientProvider locale="fr" messages={fr}>
         <Marquee />
@@ -31,9 +31,9 @@ describe('Marquee', () => {
     let total = 0
     for (const name of names) {
       const matches = screen.getAllByText(name)
-      expect(matches).toHaveLength(2)
+      expect(matches).toHaveLength(6)
       total += matches.length
     }
-    expect(total).toBe(8)
+    expect(total).toBe(24)
   })
 })

@@ -9,11 +9,13 @@ export function Marquee() {
       <div className="marquee-track flex w-max">
         {[0, 1].map((half) => (
           <div key={half} className="flex shrink-0 gap-16 pr-16">
-            {names.map((n, i) => (
-              <span key={n} className={`font-poster text-xl ${i % 2 ? 'text-accent' : 'text-ink'}`}>
-                {n}
-              </span>
-            ))}
+            {[0, 1, 2].map((rep) =>
+              names.map((n, i) => (
+                <span key={`${rep}-${n}`} className={`font-poster text-xl ${i % 2 ? 'text-accent' : 'text-ink'}`}>
+                  {n}
+                </span>
+              )),
+            )}
           </div>
         ))}
       </div>

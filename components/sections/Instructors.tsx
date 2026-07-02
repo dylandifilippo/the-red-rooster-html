@@ -11,8 +11,8 @@ export function Instructors() {
         <h2 className="font-poster text-[clamp(34px,4.4vw,64px)] text-ink">{t('heading')}</h2>
         <div className="mt-12 grid border-2 border-ink divide-y-2 divide-ink lg:grid-cols-3 lg:divide-y-0 lg:divide-x-2">
           {team.map((m, i) => (
-            <Reveal key={m.id} delay={i * 0.08}>
-              <figure className="bg-white">
+            <Reveal key={m.id} className="h-full" delay={i * 0.08}>
+              <figure className="flex h-full flex-col bg-white">
                 <Image
                   src={m.image}
                   alt={t(`${m.id}.name`)}
@@ -20,7 +20,7 @@ export function Instructors() {
                   height={640}
                   className="aspect-[3/4] h-auto w-full object-cover object-top grayscale-[0.2] transition hover:grayscale-0"
                 />
-                <figcaption className="border-t-2 border-ink px-4 py-4">
+                <figcaption className="flex-1 border-t-2 border-ink px-4 py-4">
                   <p className="font-poster text-[17px] text-ink">{t(`${m.id}.name`)}</p>
                   <p className="text-[13px] text-ink-soft">{t(`${m.id}.role`)}</p>
                   <ul className="mt-2 space-y-1">
