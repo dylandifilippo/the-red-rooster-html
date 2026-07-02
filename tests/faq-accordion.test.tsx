@@ -14,11 +14,22 @@ function setup() {
 }
 
 describe('FAQ accordion', () => {
-  it('renders 10 collapsed questions as buttons', () => {
+  it('renders the heading and 10 collapsed questions as buttons, no kicker', () => {
     setup()
+    expect(screen.getByRole('heading', { name: fr.faq.heading })).toBeInTheDocument()
+    expect(screen.queryByText(fr.sections.faq.number)).not.toBeInTheDocument()
     const buttons = screen.getAllByRole('button')
     expect(buttons).toHaveLength(10)
     for (const b of buttons) expect(b).toHaveAttribute('aria-expanded', 'false')
+  })
+  it('exposes accessible aria-controls linking each button to its answer region', () => {
+    setup()
+    const buttons = screen.getAllByRole('button')
+    for (const b of buttons) {
+      const controlsId = b.getAttribute('aria-controls')
+      expect(controlsId).toBeTruthy()
+      expect(document.getElementById(controlsId as string)).not.toBeNull()
+    }
   })
   it('expands on click and collapses the previous one', async () => {
     setup()
