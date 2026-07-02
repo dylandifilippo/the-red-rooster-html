@@ -1,20 +1,18 @@
 import { useTranslations } from 'next-intl'
-import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/lib/motion/Reveal'
 
 export function About() {
   const t = useTranslations('about')
   return (
-    <section id="about" className="border-t border-hairline">
-      <div className="mx-auto max-w-7xl px-6 py-20">
-        <SectionHeading id="about" />
-        <Reveal className="grid gap-10 lg:grid-cols-2">
-          <p className="font-serif-display text-2xl leading-snug">{t('lead')}</p>
+    <section id="about" className="border-t-2 border-ink py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6">
+        <Reveal className="grid gap-16 lg:grid-cols-[2fr_1fr]">
+          <p className="text-[clamp(26px,2.6vw,40px)] font-bold leading-[1.3] text-ink">{t('lead')}</p>
           <div>
-            <p className="font-sans text-sm leading-relaxed text-ink-muted">{t('body')}</p>
+            <p className="text-[15px] leading-relaxed text-ink-soft">{t('body')}</p>
             <div className="mt-8">
-              <p className="font-serif-display text-lg">{t('signatureName')}</p>
-              <p className="font-sans text-[10px] uppercase tracking-[0.25em] text-ink-muted">{t('signatureRole')}</p>
+              <p className="text-lg font-bold text-ink">{t('signatureName')}</p>
+              <p className="text-[13px] text-ink-soft">{t('signatureRole')}</p>
             </div>
           </div>
         </Reveal>
