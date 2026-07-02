@@ -92,8 +92,8 @@ Copy rules (taste skill, binding for every visible string):
 ## Page composition (top to bottom)
 
 Layout families used: poster-hero, marquee, split-lead, bento, poster-table,
-bordered-strip, accordion, color-block. Eight sections, eight families: the
-Section-Layout-Repetition ban is satisfied.
+bordered-strip, contact-sheet, accordion, color-block. Nine sections, nine
+families: the Section-Layout-Repetition ban is satisfied.
 
 ### 1. Nav (`components/ui/Nav.tsx`, restyled)
 Sticky, height 64px, paper background, `border-b-2 border-ink`. Left: brand as
@@ -156,7 +156,36 @@ per-day stacked cards (day heading + its slots), same fill coding. Screen
 readers: keep a proper `<table>` with `scope` attrs, or the current dl
 semantics per-day on mobile; implementer picks one and tests it.
 
-### 7. Team (`components/sections/Instructors.tsx`, id="instructors")
+### 7. Photo assignments (Dylan's new gallery photos, 2026-07-02)
+
+Source: `public/images/gallery/` (14 originals, 3-8 MP, quality-triaged).
+Working copies are resized to max 2560px longest edge before commit (originals
+enter git history first, so nothing is lost); next/image optimizes from there.
+
+- Hero: `IMG_0945.jpg` → replaces `public/images/hero.jpg` (same path; large
+  posed club group in gi, the sharpest group shot). Dylan's request.
+- Programs / BJJ Adultes: `IMG_4126.jpg` → replaces
+  `public/images/programs/bjj-adults.jpg` (six black belts in gi, posed).
+- Programs / Grappling No-Gi: `IMG_3690.jpg` → replaces
+  `public/images/programs/grappling.jpg` (footlock drilling, landscape).
+- Programs / BJJ Enfants: keeps current `bjj-kids.jpg` (Dylan's call; new set
+  contains no children's classes).
+- Programs / Lutte: red fill cell, no photo (unchanged).
+
+### 7bis. Gallery (NEW section, `components/sections/Gallery.tsx`, id="gallery")
+
+Between Team and FAQ. H2 `gallery.heading` ("La vie du club" / NL / EN).
+Contact-sheet family: container `bg-ink` with 2px gaps acting as ink borders
+(same technique as the pricing grid), photos as cells, `object-cover`.
+Grid: 3 columns desktop; first cell spans 2 columns (landscape anchor);
+6 photos total from a new typed `content/gallery.ts` (paths + per-photo
+`aspect` hint), alts from `gallery.alts` array keys (parity-checked ×3
+locales). Selection: IMG_3601 (anchor: no-gi action, Red Rooster rashguard),
+IMG_3606, IMG_3667, IMG_4124, IMG_0954, IMG_3705. Mobile: 2 columns, anchor
+spans both. Reveal stagger only, no lightbox (YAGNI; a plain photo wall).
+Remaining gallery files stay in the folder unused (future rotation).
+
+### 8. Team (`components/sections/Instructors.tsx`, id="instructors")
 H2 "L'équipe" then bordered strip: 3 figures in one `border-2 border-ink`
 container, 2px ink verticals between them, white figure bg. Portraits 3:4
 `object-cover object-top` (full belts visible: Dylan checkpoint rule),
@@ -164,14 +193,14 @@ container, 2px ink verticals between them, white figure bg. Portraits 3:4
 `font-poster` 17px, role 13px ink-soft, creds list 12.5px ink-soft (kept from
 messages). Mobile: stacked, borders adjust.
 
-### 8. FAQ (`components/sections/Faq.tsx`, id="faq")
+### 9. FAQ (`components/sections/Faq.tsx`, id="faq")
 H2 + accordion, max-w-3xl, left-aligned. Items separated by single 2px ink
 top-borders (one border per boundary, sparse, not boxed). Question 17px 700
 ink with a red plus/minus glyph (rotating, CSS transition, reduced-motion
 safe); answer 15px ink-soft. Accessible disclosure semantics kept exactly as
 the current build (it passed review). All 10 existing FAQ ids kept.
 
-### 9. Dark band: Pricing + Contact + Footer (the one color block)
+### 10. Dark band: Pricing + Contact + Footer (the one color block)
 `bg-ink text-paper`, replaces the separate Pricing/Contact/Footer styling;
 components stay separate (Pricing.tsx id="pricing", Contact.tsx id="contact",
 Footer.tsx) but share the band treatment.
