@@ -1,0 +1,19 @@
+import type { PricingGroup } from './types'
+
+export const pricing: PricingGroup[] = [
+  {
+    id: 'adults',
+    cards: [
+      { id: 'single', price: 7 },
+      { id: 'card10', price: 60 },
+      { id: 'monthly', price: 80 },
+    ],
+  },
+  {
+    id: 'kids',
+    cards: [
+      { id: 'single', price: 5 },
+      { id: 'card10', price: 40 },
+    ],
+  },
+]
