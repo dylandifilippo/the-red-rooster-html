@@ -15,8 +15,7 @@ export function Nav() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-hairline bg-canvas/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
         <a href="#top" className="flex items-center gap-3">
-          <Image src="/images/logo.png" alt={ta('logoAlt')} width={40} height={40} />
-          <span className="font-sans text-xs font-semibold tracking-[0.22em]">THE RED ROOSTER ACADEMY</span>
+          <Image src="/images/logo.png" alt={ta('logoAlt')} width={163} height={28} className="h-7 w-auto" />
         </a>
         <nav className="hidden items-center gap-6 lg:flex">
           {ANCHORS.map((a) => (
