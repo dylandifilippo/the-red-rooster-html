@@ -29,7 +29,7 @@ export function Nav() {
         </a>
         <nav className="hidden items-center gap-6 lg:flex">
           {ANCHORS.map((a) => (
-            <a key={a} href={`#${a}`} className="text-[13px] font-semibold text-ink transition-colors hover:text-accent-bright">
+            <a key={a} href={`#${a}`} className="text-[13px] font-semibold text-ink underline-offset-4 hover:underline hover:decoration-accent hover:decoration-2">
               {t(a)}
             </a>
           ))}

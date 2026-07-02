@@ -27,6 +27,7 @@ describe('LanguageSwitcher', () => {
     renderAt('fr')
     const active = screen.getByRole('link', { name: 'FR' })
     expect(active.className).toContain('text-ink')
+    expect(active.className).not.toContain('text-ink-soft')
     expect(active.className).toContain('border-b-2')
     expect(active.className).toContain('border-accent')
   })
