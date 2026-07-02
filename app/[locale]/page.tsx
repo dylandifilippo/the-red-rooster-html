@@ -2,6 +2,7 @@ import { setRequestLocale } from 'next-intl/server'
 import { use } from 'react'
 import { Nav } from '@/components/ui/Nav'
 import { Footer } from '@/components/ui/Footer'
+import { Marquee } from '@/components/ui/Marquee'
 import { Hero } from '@/components/sections/Hero'
 import { About } from '@/components/sections/About'
 import { Programs } from '@/components/sections/Programs'
@@ -24,6 +25,7 @@ export default function HomePage({ params }: { params: Promise<{ locale: string 
       <Nav />
       <main>
         <Hero />
+        <Marquee />
         <About />
         <Programs />
         <Instructors />

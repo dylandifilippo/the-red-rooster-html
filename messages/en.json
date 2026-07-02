@@ -14,12 +14,12 @@
     "cta": "Trial Class"
   },
   "hero": {
-    "location": "Pironchamps · Charleroi",
-    "headline": "The gentle art, taught with <em>rigor</em> and camaraderie.",
-    "sub": "From Hélio Gracie to Flavio Behring, all the way to the mats of Pironchamps — one lineage, one method, one family.",
-    "photoTag": "Flavio Behring Method",
-    "ctaPrimary": "Book a Trial Class",
-    "ctaSecondary": "View the Schedule"
+    "line1": "Brazilian",
+    "line2": "jiu-jitsu",
+    "line3": "in Charleroi.",
+    "sub": "From Hélio Gracie to Flavio Behring: one method, passed down with discipline on the mats of Pironchamps.",
+    "cta": "Book a Trial Class",
+    "scheduleCta": "See the schedule"
   },
   "sections": {
     "about": {

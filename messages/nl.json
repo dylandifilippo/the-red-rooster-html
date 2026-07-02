@@ -14,12 +14,12 @@
     "cta": "Proefles"
   },
   "hero": {
-    "location": "Pironchamps · Charleroi",
-    "headline": "De zachte kunst, onderwezen met <em>discipline</em> en gezelligheid.",
-    "sub": "Van Hélio Gracie tot Flavio Behring, tot op de tatami's van Pironchamps — één lijn, één methode, één familie.",
-    "photoTag": "Methode Flavio Behring",
-    "ctaPrimary": "Boek een proefles",
-    "ctaSecondary": "Bekijk het rooster"
+    "line1": "Braziliaans",
+    "line2": "jiu-jitsu",
+    "line3": "in Charleroi.",
+    "sub": "Van Hélio Gracie tot Flavio Behring: één methode, doorgegeven met discipline op de tatami's van Pironchamps.",
+    "cta": "Boek een proefles",
+    "scheduleCta": "Bekijk het uurrooster"
   },
   "sections": {
     "about": {

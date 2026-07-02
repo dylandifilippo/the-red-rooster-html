@@ -1,42 +1,45 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { CtaButton } from '@/components/ui/CtaButton'
-import { Parallax } from '@/lib/motion/Parallax'
+import { HeroIntro } from '@/lib/motion/HeroIntro'
 
 export function Hero() {
   const t = useTranslations('hero')
   const ta = useTranslations('a11y')
   return (
-    <section id="top" className="mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 pt-36 lg:grid-cols-[1.2fr_1fr]">
-      <div>
-        <p className="font-sans text-[11px] uppercase tracking-[0.4em] text-accent-bright">{t('location')}</p>
-        <h1 className="mt-5 font-serif-display text-5xl leading-[1.1] font-medium lg:text-6xl">
-          {t.rich('headline', { em: (chunks) => <em className="text-accent-bright">{chunks}</em> })}
+    <section id="top" className="bg-paper pt-24">
+      <HeroIntro className="mx-auto max-w-7xl px-6 pb-16">
+        <h1 className="break-words font-poster text-[clamp(52px,9vw,150px)] leading-[0.9]">
+          <span className="hero-line block text-ink">{t('line1')}</span>
+          <span className="hero-line block text-transparent [-webkit-text-stroke:2px_var(--color-ink)]">
+            {t('line2')}
+          </span>
+          <span className="hero-line block text-accent">{t('line3')}</span>
         </h1>
-        <p className="mt-6 max-w-md font-sans text-sm leading-relaxed text-ink-muted">{t('sub')}</p>
-        <div className="mt-9 flex flex-wrap gap-4">
-          <CtaButton href="#contact">{t('ctaPrimary')}</CtaButton>
-          <CtaButton href="#schedule" variant="outline">{t('ctaSecondary')}</CtaButton>
-        </div>
-      </div>
-      <figure className="relative">
-        <div className="overflow-hidden">
-          <Parallax>
+        <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_1.2fr]">
+          <div className="flex flex-col justify-center">
+            <p className="max-w-[40ch] text-[17px] text-ink-soft">{t('sub')}</p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a href="#contact" className="bg-accent px-8 py-4 font-bold text-white transition-colors hover:bg-[#a93a26]">
+                {t('cta')}
+              </a>
+              <a href="#schedule" className="border-2 border-ink px-7 py-[14px] font-semibold text-ink transition-colors hover:bg-ink hover:text-paper">
+                {t('scheduleCta')}
+              </a>
+            </div>
+          </div>
+          <div className="relative aspect-[4/3] overflow-hidden border-2 border-ink lg:aspect-auto">
             <Image
               src="/images/hero.jpg"
               alt={ta('heroAlt')}
-              width={1920}
-              height={1080}
+              width={2560}
+              height={1920}
               priority
-              sizes="(min-width: 1024px) 45vw, 92vw"
-              className="h-auto w-full scale-110 object-cover"
+              sizes="(min-width: 1024px) 55vw, 92vw"
+              className="hero-image h-[115%] w-full object-cover"
             />
-          </Parallax>
+          </div>
         </div>
-        <figcaption className="absolute -bottom-3 -left-3 bg-accent px-4 py-2 font-sans text-[10px] uppercase tracking-[0.25em] text-white">
-          {t('photoTag')}
-        </figcaption>
-      </figure>
+      </HeroIntro>
     </section>
   )
 }

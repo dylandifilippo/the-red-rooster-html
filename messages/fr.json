@@ -14,12 +14,12 @@
     "cta": "Cours d'essai"
   },
   "hero": {
-    "location": "Pironchamps · Charleroi",
-    "headline": "L'art doux, enseigné avec <em>rigueur</em> et convivialité.",
-    "sub": "D'Hélio Gracie à Flavio Behring, jusqu'aux tatamis de Pironchamps — une lignée, une méthode, une famille.",
-    "photoTag": "Méthode Flavio Behring",
-    "ctaPrimary": "Réserver un cours d'essai",
-    "ctaSecondary": "Voir le planning"
+    "line1": "Jiu-jitsu",
+    "line2": "brésilien",
+    "line3": "à Charleroi.",
+    "sub": "D'Hélio Gracie à Flavio Behring, une méthode transmise avec rigueur sur les tatamis de Pironchamps.",
+    "cta": "Réserver un cours d'essai",
+    "scheduleCta": "Voir les horaires"
   },
   "sections": {
     "about": {
