@@ -96,6 +96,17 @@
       "creds": []
     }
   },
+  "gallery": {
+    "heading": "Het clubleven",
+    "alts": [
+      "Sparringsessie in no-gi",
+      "Lachend moment tijdens de training",
+      "Detail van een leglock oefening",
+      "Groepsfoto van de club in kimono",
+      "Twee teamgenoten in kimono",
+      "Teamfoto in no-gi"
+    ]
+  },
   "days": {
     "monday": "Maandag",
     "tuesday": "Dinsdag",

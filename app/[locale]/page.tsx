@@ -8,6 +8,7 @@ import { About } from '@/components/sections/About'
 import { Programs } from '@/components/sections/Programs'
 import { Instructors } from '@/components/sections/Instructors'
 import { Schedule } from '@/components/sections/Schedule'
+import { Gallery } from '@/components/sections/Gallery'
 import { Faq } from '@/components/sections/Faq'
 import { Pricing } from '@/components/sections/Pricing'
 import { Contact } from '@/components/sections/Contact'
@@ -30,6 +31,7 @@ export default function HomePage({ params }: { params: Promise<{ locale: string 
         <Programs />
         <Instructors />
         <Schedule />
+        <Gallery />
         <Faq />
         <Pricing />
         <Contact />

@@ -96,6 +96,17 @@
       "creds": []
     }
   },
+  "gallery": {
+    "heading": "Club life",
+    "alts": [
+      "No-gi sparring session",
+      "Laughing moment during training",
+      "Leglock drilling detail",
+      "Club group photo in gi",
+      "Two teammates in kimono",
+      "No-gi team photo"
+    ]
+  },
   "days": {
     "monday": "Monday",
     "tuesday": "Tuesday",

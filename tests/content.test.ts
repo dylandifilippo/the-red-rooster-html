@@ -5,6 +5,7 @@ import { schedule } from '../content/schedule'
 import { pricing } from '../content/pricing'
 import { faqIds } from '../content/faq'
 import { contact } from '../content/contact'
+import { gallery } from '../content/gallery'
 
 const TIME = /^\d{2}:\d{2}$/
 
@@ -51,8 +52,22 @@ describe('content integrity', () => {
   })
   it('images referenced by content exist in public/', async () => {
     const { existsSync } = await import('node:fs')
-    for (const p of [...programs.map((x) => x.image), ...team.map((x) => x.image)]) {
+    for (const p of [...programs.map((x) => x.image), ...team.map((x) => x.image), ...gallery.map((x) => x.src)]) {
       expect(existsSync(`public${p}`), p).toBe(true)
     }
+  })
+  it('has exactly 6 gallery photos with valid span values', () => {
+    expect(gallery).toHaveLength(6)
+    for (const g of gallery) {
+      expect([1, 2, 'lg-2']).toContain(g.span)
+    }
+  })
+  it('gallery column units tile cleanly on both breakpoints (no empty cells)', () => {
+    // mobile (2 cols): span 2 -> 2 units, 'lg-2' -> 1 unit (single-wide on mobile), 1 -> 1 unit
+    const mobileUnits = gallery.reduce((sum, g) => sum + (g.span === 2 ? 2 : 1), 0)
+    expect(mobileUnits % 2).toBe(0)
+    // desktop (3 cols): span 2 and 'lg-2' both count as 2 units
+    const lgUnits = gallery.reduce((sum, g) => sum + (g.span === 1 ? 1 : 2), 0)
+    expect(lgUnits % 3).toBe(0)
   })
 })

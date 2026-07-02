@@ -96,6 +96,17 @@
       "creds": []
     }
   },
+  "gallery": {
+    "heading": "La vie du club",
+    "alts": [
+      "Séance de sparring en no-gi",
+      "Moment de complicité pendant l'entraînement",
+      "Détail d'un travail de leglock",
+      "Photo de groupe du club en kimono",
+      "Deux coéquipiers en kimono",
+      "Photo d'équipe en no-gi"
+    ]
+  },
   "days": {
     "monday": "Lundi",
     "tuesday": "Mardi",

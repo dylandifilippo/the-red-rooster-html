@@ -31,3 +31,19 @@ export interface PricingGroup {
   id: 'adults' | 'kids'
   cards: PriceCard[]
 }
+
+/**
+ * Column span for a gallery cell on the contact-sheet grid (2 cols on
+ * mobile, 3 cols on lg+). `span` picks the Tailwind class the component
+ * applies:
+ *   - 1     -> no span class (single cell at both breakpoints)
+ *   - 2     -> "col-span-2" (double-wide at BOTH breakpoints)
+ *   - 'lg-2'-> "lg:col-span-2" (single-wide on mobile, double-wide on lg)
+ * This third value exists because the same span pattern that tiles a
+ * clean 2-col mobile grid does not also tile a clean 3-col desktop grid
+ * (see Gallery.tsx grid-arithmetic comment for the row math).
+ */
+export interface GalleryPhoto {
+  src: string
+  span: 1 | 2 | 'lg-2'
+}
