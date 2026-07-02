@@ -58,6 +58,7 @@
     "signatureRole": "Director / Instructor"
   },
   "programs": {
+    "heading": "Classes",
     "bjj-adults": {
       "title": "Adults BJJ",
       "description": "Brazilian Jiu-Jitsu in the Gi: technique, self-defense and sparring, for all levels."

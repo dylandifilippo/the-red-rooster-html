@@ -58,6 +58,7 @@
     "signatureRole": "Directeur / Instructeur"
   },
   "programs": {
+    "heading": "Les cours",
     "bjj-adults": {
       "title": "BJJ Adultes",
       "description": "Le Jiu-Jitsu Brésilien en kimono : technique, autodéfense et sparring, pour tous les niveaux."

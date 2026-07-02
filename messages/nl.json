@@ -58,6 +58,7 @@
     "signatureRole": "Directeur / Instructeur"
   },
   "programs": {
+    "heading": "De lessen",
     "bjj-adults": {
       "title": "BJJ Volwassenen",
       "description": "Braziliaans Jiu-Jitsu in kimono: techniek, zelfverdediging en sparring, voor elk niveau."
