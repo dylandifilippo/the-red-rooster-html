@@ -29,12 +29,15 @@ export function Gallery() {
     <section id="gallery" className="border-t-2 border-ink py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <h2 className="font-poster text-[clamp(34px,4.4vw,64px)] text-ink">{t('heading')}</h2>
-        <div className="mt-12 grid grid-cols-2 gap-[2px] border-2 border-ink bg-ink lg:grid-cols-3">
+        {/* Fixed row heights, not per-cell aspect ratios: grid rows size to their
+            tallest cell, so an aspect-locked span-2 cell would leave ink holes
+            beside shorter span-1 neighbors (same technique as Programs). */}
+        <div className="mt-12 grid auto-rows-[44vw] grid-cols-2 gap-[2px] border-2 border-ink bg-ink sm:auto-rows-[36vw] lg:auto-rows-[300px] lg:grid-cols-3">
           {gallery.map((photo, i) => (
             <Reveal
               key={photo.src}
               delay={i * 0.06}
-              className={`relative aspect-[4/3] overflow-hidden ${spanClass(photo.span)}`}
+              className={`relative overflow-hidden ${spanClass(photo.span)}`}
             >
               <Image src={photo.src} alt={alts[i]} fill sizes={sizesFor(photo.span)} className="object-cover" />
             </Reveal>
