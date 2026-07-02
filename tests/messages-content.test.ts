@@ -14,7 +14,7 @@ describe('fr catalog covers content ids', () => {
   })
   it('has title+description for every program', () => {
     for (const p of programs) {
-      const item = (fr.programs as Record<string, { title: string; description: string }>)[p.id]
+      const item = (fr.programs as unknown as Record<string, { title: string; description: string }>)[p.id]
       expect(item?.title, p.id).toBeTruthy()
       expect(item?.description, p.id).toBeTruthy()
     }
