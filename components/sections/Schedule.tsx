@@ -1,34 +1,105 @@
 import { useTranslations } from 'next-intl'
 import { schedule } from '@/content/schedule'
-import { SectionHeading } from '@/components/ui/SectionHeading'
-import { Reveal } from '@/lib/motion/Reveal'
+import type { ClassSlot } from '@/content/types'
+import { timetableRows, isKidsSlot } from '@/lib/timetable'
+import { TimetableSweep } from '@/lib/motion/TimetableSweep'
+
+// Kids sessions get the ink fill, every other program (adults, grappling,
+// lutte) gets the accent/red fill, empty cells stay white. Shared by both
+// the desktop table and the mobile stacked cards so the fill coding never
+// drifts between the two variants.
+function fillClass(slot: ClassSlot | null): string {
+  if (!slot) return 'bg-white'
+  return isKidsSlot(slot) ? 'bg-ink text-paper font-bold' : 'bg-accent text-white font-bold'
+}
+
+// 1px internal column separators, skipped on the first day column so they
+// never double up against the 2px border-r that already separates the time
+// column from the day columns.
+function columnBorder(dayIndex: number): string {
+  return dayIndex === 0 ? '' : 'border-l border-[#dedbd3]'
+}
 
 export function Schedule() {
   const tDays = useTranslations('days')
   const tPrograms = useTranslations('programs')
   const t = useTranslations('schedule')
+  const rows = timetableRows()
+
   return (
-    <section id="schedule" className="border-t border-hairline">
-      <div className="mx-auto max-w-7xl px-6 py-20">
-        <SectionHeading id="schedule" />
-        <Reveal>
-          <dl className="divide-y divide-hairline border-y border-hairline">
-            {schedule.map((day) => (
-              <div key={day.day} className="grid gap-2 py-5 sm:grid-cols-[140px_1fr]">
-                <dt className="font-serif-display text-xl">{tDays(day.day)}</dt>
-                <dd className="flex flex-wrap gap-x-10 gap-y-2">
-                  {day.slots.map((slot) => (
-                    <span key={`${slot.programId}${slot.start}`} className="font-sans text-sm">
-                      <span>{tPrograms(`${slot.programId}.title`)}</span>{' '}
-                      <span className="text-ink-muted">{slot.start} – {slot.end}</span>
-                    </span>
+    <section id="schedule" className="border-t-2 border-ink py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6">
+        <h2 className="font-poster text-[clamp(34px,4.4vw,64px)] text-ink">{t('heading')}</h2>
+
+        {/* Desktop: a real table, derived from content/schedule.ts (rows =
+            sorted unique start times, columns = days in content order). The
+            single accessible source; the mobile cards below repeat this
+            data with aria-hidden. */}
+        <TimetableSweep className="mt-12 overflow-x-auto border-2 border-ink bg-white">
+          <table className="hidden w-full border-collapse lg:table">
+            <caption className="sr-only">{t('heading')}</caption>
+            <thead>
+              <tr>
+                <th className="border-r-2 border-ink bg-ink px-4 py-3.5" />
+                {schedule.map((day, i) => (
+                  <th
+                    key={day.day}
+                    scope="col"
+                    className={`bg-ink px-4 py-3.5 text-left text-[14px] font-bold uppercase tracking-normal text-paper ${columnBorder(i)}`}
+                  >
+                    {tDays(day.day)}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((row) => (
+                <tr key={row.start}>
+                  <th
+                    scope="row"
+                    className="border-r-2 border-ink px-4 py-5 text-left font-mono text-[15px] font-semibold"
+                  >
+                    {row.start}
+                  </th>
+                  {row.cells.map((slot, i) => (
+                    <td
+                      key={schedule[i].day}
+                      className={`px-4 py-5 text-[14.5px] ${columnBorder(i)} ${fillClass(slot)}`}
+                    >
+                      {slot && (
+                        <span className="timetable-fill block">{tPrograms(`${slot.programId}.title`)}</span>
+                      )}
+                    </td>
                   ))}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </Reveal>
-        <p className="mt-6 font-sans text-xs text-ink-muted">{t('note')}</p>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </TimetableSweep>
+
+        {/* Mobile (< lg): per-day stacked cards, same fill coding, derived
+            from the same data. Hidden from assistive tech: the table above
+            stays the single accessible source, this is a visual-only dupe. */}
+        <div aria-hidden="true" className="mt-12 flex flex-col gap-6 lg:hidden">
+          {schedule.map((day) => (
+            <div key={day.day} className="border-2 border-ink bg-white">
+              <p className="font-poster bg-ink px-4 py-3 text-xl text-paper">{tDays(day.day)}</p>
+              <ul className="divide-y divide-[#dedbd3]">
+                {day.slots.map((slot) => (
+                  <li
+                    key={`${slot.programId}-${slot.start}`}
+                    className={`flex items-center justify-between gap-4 px-4 py-3 text-[14.5px] ${fillClass(slot)}`}
+                  >
+                    <span className="font-mono font-semibold">{slot.start}</span>
+                    <span className="font-bold">{tPrograms(`${slot.programId}.title`)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-6 text-xs text-ink-soft">{t('note')}</p>
       </div>
     </section>
   )
