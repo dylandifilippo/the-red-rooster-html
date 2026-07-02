@@ -16,7 +16,9 @@ export function Hero() {
           <span className="hero-line block whitespace-nowrap text-accent">{t('line3')}</span>
         </h1>
         <div className="relative mt-10 lg:mt-14">
-          <div className="hero-panel flex flex-col justify-center lg:absolute lg:bottom-10 lg:left-0 lg:z-10 lg:max-w-[420px] lg:border-2 lg:border-ink lg:bg-paper lg:p-8">
+          {/* Panel sits beside the photo, its right edge crossing it by ~2% of the
+              container (≈3% of the image, Dylan's spec) at every lg width. */}
+          <div className="hero-panel mb-8 flex flex-col justify-center lg:absolute lg:bottom-10 lg:left-0 lg:z-10 lg:mb-0 lg:w-[32%] lg:border-2 lg:border-ink lg:bg-paper lg:p-8">
             <p className="max-w-[40ch] text-[17px] text-ink-soft">{t('sub')}</p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a href="#contact" className="bg-accent px-8 py-4 font-bold text-white transition-colors hover:bg-[#a93a26]">
@@ -27,7 +29,7 @@ export function Hero() {
               </a>
             </div>
           </div>
-          <div className="hero-frame relative w-full overflow-hidden border-2 border-ink aspect-[4/3] lg:aspect-[16/9] lg:w-[76%] lg:ml-auto">
+          <div className="hero-frame relative w-full overflow-hidden border-2 border-ink aspect-[4/3] lg:aspect-[16/9] lg:w-[70%] lg:ml-auto">
             <Image
               src="/images/hero.jpg"
               alt={ta('heroAlt')}
