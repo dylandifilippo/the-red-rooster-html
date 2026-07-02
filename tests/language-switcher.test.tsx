@@ -23,4 +23,16 @@ describe('LanguageSwitcher', () => {
     renderAt('fr')
     expect(screen.getByRole('link', { name: 'FR' })).toHaveAttribute('aria-current', 'true')
   })
+  it('styles the active locale with ink text and an accent underline', () => {
+    renderAt('fr')
+    const active = screen.getByRole('link', { name: 'FR' })
+    expect(active.className).toContain('text-ink')
+    expect(active.className).toContain('border-b-2')
+    expect(active.className).toContain('border-accent')
+  })
+  it('styles inactive locales with soft ink text', () => {
+    renderAt('fr')
+    const inactive = screen.getByRole('link', { name: 'NL' })
+    expect(inactive.className).toContain('text-ink-soft')
+  })
 })

@@ -1,9 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { LanguageSwitcher } from './LanguageSwitcher'
-import { CtaButton } from './CtaButton'
 
 const ANCHORS = ['about', 'programs', 'instructors', 'schedule', 'faq', 'pricing', 'contact'] as const
 
@@ -23,20 +21,22 @@ export function Nav() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 flex flex-col border-b border-hairline backdrop-blur ${open ? 'h-dvh bg-canvas' : 'bg-canvas/90'}`}
+      className={`fixed inset-x-0 top-0 z-50 flex flex-col border-b-2 border-ink bg-paper ${open ? 'h-dvh' : ''}`}
     >
-      <div className="mx-auto flex w-full max-w-7xl shrink-0 items-center justify-between gap-6 px-6 py-4">
-        <a href="#top" className="flex items-center gap-3">
-          <Image src="/images/logo.png" alt={ta('logoAlt')} width={163} height={28} className="h-7 w-auto" />
+      <div className="mx-auto flex h-16 w-full max-w-7xl shrink-0 items-center justify-between gap-6 px-7">
+        <a href="#top" className="font-poster text-[15px] text-ink">
+          THE RED ROOSTER ACADEMY
         </a>
         <nav className="hidden items-center gap-6 lg:flex">
           {ANCHORS.map((a) => (
-            <a key={a} href={`#${a}`} className="font-sans text-[11px] uppercase tracking-[0.15em] text-ink-muted transition-colors hover:text-ink">
+            <a key={a} href={`#${a}`} className="text-[13px] font-semibold text-ink transition-colors hover:text-accent-bright">
               {t(a)}
             </a>
           ))}
           <LanguageSwitcher />
-          <CtaButton href="#contact" variant="outline">{t('cta')}</CtaButton>
+          <a href="#contact" className="inline-block bg-ink px-[18px] py-[10px] text-[13px] font-bold text-paper transition-colors hover:bg-ink/90">
+            {t('cta')}
+          </a>
         </nav>
         <button
           type="button"
@@ -50,15 +50,24 @@ export function Nav() {
         </button>
       </div>
       {open && (
-        <nav className="min-h-0 flex-1 overflow-y-auto border-t border-hairline bg-canvas px-6 py-6 lg:hidden">
-          <ul className="flex flex-col gap-4">
+        <nav className="min-h-0 flex-1 overflow-y-auto border-t-2 border-ink bg-paper px-7 py-8 lg:hidden">
+          <ul className="flex flex-col gap-8">
             {ANCHORS.map((a) => (
               <li key={a}>
-                <a href={`#${a}`} onClick={() => setOpen(false)} className="font-sans text-sm uppercase tracking-[0.15em]">
+                <a href={`#${a}`} onClick={() => setOpen(false)} className="font-poster text-[34px] text-ink">
                   {t(a)}
                 </a>
               </li>
             ))}
+            <li className="pt-4">
+              <a
+                href="#contact"
+                onClick={() => setOpen(false)}
+                className="inline-block bg-accent px-[18px] py-[10px] text-[13px] font-bold text-white"
+              >
+                {t('cta')}
+              </a>
+            </li>
             <li className="pt-2"><LanguageSwitcher /></li>
           </ul>
         </nav>
