@@ -16,7 +16,7 @@
   "hero": {
     "location": "Pironchamps · Charleroi",
     "headline": "L'art doux, enseigné avec <em>rigueur</em> et convivialité.",
-    "sub": "De Hélio Gracie à Flavio Behring, jusqu'aux tatamis de Pironchamps — une lignée, une méthode, une famille.",
+    "sub": "D'Hélio Gracie à Flavio Behring, jusqu'aux tatamis de Pironchamps — une lignée, une méthode, une famille.",
     "photoTag": "Méthode Flavio Behring",
     "ctaPrimary": "Réserver un cours d'essai",
     "ctaSecondary": "Voir le planning"
@@ -39,11 +39,11 @@
   "programs": {
     "bjj-adults": {
       "title": "BJJ Adultes",
-      "description": "Le Jiu-Jitsu Brésilien en kimono : technique, self-défense et sparring, pour tous les niveaux."
+      "description": "Le Jiu-Jitsu Brésilien en kimono : technique, autodéfense et sparring, pour tous les niveaux."
     },
     "bjj-kids": {
       "title": "BJJ Enfants",
-      "description": "Dès 5 ans : coordination, confiance, discipline et self-défense, dans un cadre ludique et bienveillant."
+      "description": "Dès 5 ans : coordination, confiance, discipline et autodéfense, dans un cadre ludique et bienveillant."
     },
     "grappling": {
       "title": "Grappling No-Gi",
@@ -110,7 +110,7 @@
       },
       "bring": {
         "question": "Que dois-je apporter ?",
-        "answer": "Tout ce dont vous avez besoin pour votre premier cours, ce sont des vêtements confortables. Un t-shirt ajusté ou un rashguard est idéal, et un short sans poche est préférable. Pour les femmes, des collants et un haut sont parfaits. Si vous avez un kimono de Jiu-Jitsu ou « Gi », n'hésitez pas à le porter. Une bouteille d'eau et une petite serviette sont également une bonne idée."
+        "answer": "Tout ce dont vous avez besoin pour votre premier cours, ce sont des vêtements confortables. Un t-shirt ajusté ou un rashguard est idéal, et un short sans poche est préférable. Pour les femmes, des collants et un haut sont parfaits. Si vous avez un kimono de Jiu-Jitsu ou « Gi », n'hésitez pas à le porter. Une bouteille d'eau et une petite serviette sont également une bonne idée."
       },
       "protection": {
         "question": "Ai-je besoin d'équipement de protection ?",
