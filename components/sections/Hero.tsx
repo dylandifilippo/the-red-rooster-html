@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { CtaButton } from '@/components/ui/CtaButton'
+import { Parallax } from '@/lib/motion/Parallax'
 
 export function Hero() {
   const t = useTranslations('hero')
@@ -19,7 +20,11 @@ export function Hero() {
         </div>
       </div>
       <figure className="relative">
-        <Image src="/images/hero.jpg" alt={ta('heroAlt')} width={1920} height={1080} priority className="h-auto w-full object-cover" />
+        <div className="overflow-hidden">
+          <Parallax>
+            <Image src="/images/hero.jpg" alt={ta('heroAlt')} width={1920} height={1080} priority className="h-auto w-full scale-110 object-cover" />
+          </Parallax>
+        </div>
         <figcaption className="absolute -bottom-3 -left-3 bg-accent px-4 py-2 font-sans text-[10px] uppercase tracking-[0.25em] text-white">
           {t('photoTag')}
         </figcaption>

@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl'
 import { pricing } from '@/content/pricing'
 import { SectionHeading } from '@/components/ui/SectionHeading'
+import { Reveal } from '@/lib/motion/Reveal'
 
 export function Pricing() {
   const t = useTranslations('pricing')
@@ -8,7 +9,7 @@ export function Pricing() {
     <section id="pricing" className="border-t border-hairline">
       <div className="mx-auto max-w-6xl px-6 py-20">
         <SectionHeading id="pricing" />
-        <div className="grid gap-14 lg:grid-cols-2">
+        <Reveal className="grid gap-14 lg:grid-cols-2">
           {pricing.map((group) => (
             <div key={group.id}>
               <h3 className="font-serif-display text-2xl">{t(`${group.id}.title`)}</h3>
@@ -25,7 +26,7 @@ export function Pricing() {
               </dl>
             </div>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   )

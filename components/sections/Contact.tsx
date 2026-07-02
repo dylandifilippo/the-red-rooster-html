@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl'
 import { contact } from '@/content/contact'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { MapEmbed } from '@/components/ui/MapEmbed'
+import { Reveal } from '@/lib/motion/Reveal'
 
 export function Contact() {
   const t = useTranslations('contact')
@@ -9,7 +10,7 @@ export function Contact() {
     <section id="contact" className="border-t border-hairline">
       <div className="mx-auto max-w-6xl px-6 py-20">
         <SectionHeading id="contact" />
-        <div className="grid gap-12 lg:grid-cols-2">
+        <Reveal className="grid gap-12 lg:grid-cols-2">
           <div className="space-y-8">
             <div>
               <p className="font-sans text-[10px] uppercase tracking-[0.3em] text-ink-muted">{t('callUs')}</p>
@@ -32,7 +33,7 @@ export function Contact() {
             </div>
           </div>
           <MapEmbed />
-        </div>
+        </Reveal>
       </div>
     </section>
   )
