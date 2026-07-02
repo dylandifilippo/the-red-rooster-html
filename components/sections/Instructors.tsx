@@ -1,28 +1,37 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { team } from '@/content/team'
-import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/lib/motion/Reveal'
 
 export function Instructors() {
   const t = useTranslations('team')
   return (
-    <section id="instructors" className="border-t border-hairline">
-      <div className="mx-auto max-w-7xl px-6 py-20">
-        <SectionHeading id="instructors" />
-        <div className="grid gap-10 sm:grid-cols-3">
+    <section id="instructors" className="border-t-2 border-ink py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6">
+        <h2 className="font-poster text-[clamp(34px,4.4vw,64px)] text-ink">{t('heading')}</h2>
+        <div className="mt-12 grid border-2 border-ink divide-y-2 divide-ink lg:grid-cols-3 lg:divide-y-0 lg:divide-x-2">
           {team.map((m, i) => (
             <Reveal key={m.id} delay={i * 0.08}>
-              <article>
-                <Image src={m.image} alt={t(`${m.id}.name`)} width={480} height={640} className="aspect-[3/4] h-auto w-full object-cover" />
-                <h3 className="mt-5 font-serif-display text-2xl">{t(`${m.id}.name`)}</h3>
-                <p className="mt-1 font-sans text-[10px] uppercase tracking-[0.2em] text-ink-muted">{t(`${m.id}.role`)}</p>
-                <ul className="mt-3 space-y-1">
-                  {(t.raw(`${m.id}.creds`) as string[]).map((c) => (
-                    <li key={c} className="font-sans text-xs leading-relaxed text-ink-muted">— {c}</li>
-                  ))}
-                </ul>
-              </article>
+              <figure className="bg-white">
+                <Image
+                  src={m.image}
+                  alt={t(`${m.id}.name`)}
+                  width={480}
+                  height={640}
+                  className="aspect-[3/4] h-auto w-full object-cover object-top grayscale-[0.2] transition hover:grayscale-0"
+                />
+                <figcaption className="border-t-2 border-ink px-4 py-4">
+                  <p className="font-poster text-[17px] text-ink">{t(`${m.id}.name`)}</p>
+                  <p className="text-[13px] text-ink-soft">{t(`${m.id}.role`)}</p>
+                  <ul className="mt-2 space-y-1">
+                    {(t.raw(`${m.id}.creds`) as string[]).map((c, ci) => (
+                      <li key={ci} className="text-[12.5px] leading-relaxed text-ink-soft">
+                        {c}
+                      </li>
+                    ))}
+                  </ul>
+                </figcaption>
+              </figure>
             </Reveal>
           ))}
         </div>
