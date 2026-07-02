@@ -1,6 +1,160 @@
 {
   "meta": {
-    "title": "The Red Rooster Academy",
-    "description": "Braziliaans Jiu-Jitsu in Pironchamps (Charleroi)"
+    "title": "The Red Rooster Academy — Jiu-Jitsu Brésilien à Charleroi",
+    "description": "Académie de Jiu-Jitsu Brésilien, Grappling et Lutte à Pironchamps (Charleroi). Méthode du Grand-Maître Flavio Behring. Adultes et enfants dès 5 ans."
+  },
+  "nav": {
+    "about": "À propos",
+    "programs": "Programmes",
+    "instructors": "Instructeurs",
+    "schedule": "Planning",
+    "faq": "FAQ",
+    "pricing": "Tarifs",
+    "contact": "Contact",
+    "cta": "Cours d'essai"
+  },
+  "hero": {
+    "location": "Pironchamps · Charleroi",
+    "headline": "L'art doux, enseigné avec <em>rigueur</em> et convivialité.",
+    "sub": "De Hélio Gracie à Flavio Behring, jusqu'aux tatamis de Pironchamps — une lignée, une méthode, une famille.",
+    "photoTag": "Méthode Flavio Behring",
+    "ctaPrimary": "Réserver un cours d'essai",
+    "ctaSecondary": "Voir le planning"
+  },
+  "sections": {
+    "about": { "number": "Nº 01", "title": "L'Académie" },
+    "programs": { "number": "Nº 02", "title": "Les Programmes" },
+    "instructors": { "number": "Nº 03", "title": "Les Instructeurs" },
+    "schedule": { "number": "Nº 04", "title": "Le Planning" },
+    "faq": { "number": "Nº 05", "title": "Foire Aux Questions" },
+    "pricing": { "number": "Nº 06", "title": "Les Tarifs" },
+    "contact": { "number": "Nº 07", "title": "Contact" }
+  },
+  "about": {
+    "lead": "The Red Rooster Academy est une équipe d'entraînement de Jiu-Jitsu Brésilien basée dans la région de Charleroi, suivant la méthode du Grand-Maître Flavio Behring.",
+    "body": "L'entraînement y est sérieux, discipliné, convivial et totalement en accord avec les principes de notre Grand-Maître Flavio Behring, élève direct d'Hélio Gracie.",
+    "signatureName": "Pierre Henry",
+    "signatureRole": "Directeur / Instructeur"
+  },
+  "programs": {
+    "bjj-adults": {
+      "title": "BJJ Adultes",
+      "description": "Le Jiu-Jitsu Brésilien en kimono : technique, self-défense et sparring, pour tous les niveaux."
+    },
+    "bjj-kids": {
+      "title": "BJJ Enfants",
+      "description": "Dès 5 ans : coordination, confiance, discipline et self-défense, dans un cadre ludique et bienveillant."
+    },
+    "grappling": {
+      "title": "Grappling No-Gi",
+      "description": "La lutte au sol sans kimono : contrôles, amenées au sol et soumissions, au rythme moderne du no-gi."
+    },
+    "lutte": {
+      "title": "Lutte",
+      "description": "Amenées au sol, posture et pression : la base debout qui complète le travail au sol."
+    }
+  },
+  "team": {
+    "pierre": {
+      "name": "Pierre",
+      "role": "Professeur BJJ & Grappling",
+      "creds": [
+        "Ceinture noire (1ᵉʳ degré) de Jiu-Jitsu Brésilien sous le Grand-Maître Flavio Behring"
+      ]
+    },
+    "sebastien": {
+      "name": "Sébastien",
+      "role": "Instructeur adultes & enfants — BJJ & Grappling",
+      "creds": []
+    },
+    "mike": {
+      "name": "Mike",
+      "role": "Instructeur assistant — BJJ & Grappling",
+      "creds": []
+    }
+  },
+  "days": {
+    "monday": "Lundi",
+    "tuesday": "Mardi",
+    "wednesday": "Mercredi",
+    "friday": "Vendredi"
+  },
+  "schedule": {
+    "note": "Premier cours d'essai gratuit — présentez-vous simplement 10 minutes avant le début."
+  },
+  "faq": {
+    "items": {
+      "fitness": {
+        "question": "Dois-je être en forme pour commencer ?",
+        "answer": "Vous n'avez pas besoin d'être en super forme pour commencer à vous entraîner. En fait, le BJJ est un excellent moyen de se mettre en forme. À l'académie, tout le monde est le bienvenu sur les tapis, quel que soit son niveau de forme physique."
+      },
+      "experience": {
+        "question": "Ai-je besoin d'une expérience préalable en arts martiaux ?",
+        "answer": "Pas du tout. Si vous vous êtes déjà entraîné dans un autre art martial, c'est bien, mais vous n'avez besoin d'aucune expérience préalable. Que vous commenciez tout juste votre voyage BJJ ou que vous soyez un ancien, vous serez toujours le bienvenu."
+      },
+      "age": {
+        "question": "Suis-je trop vieux ?",
+        "answer": "Ça n'existe pas. Il n'est jamais trop tard pour commencer à s'entraîner au BJJ. Nos programmes sont conçus pour s'adresser à tout le monde. Tous les étudiants sont encouragés à s'entraîner selon leurs propres limites et peuvent pousser aussi fort qu'ils le souhaitent."
+      },
+      "women": {
+        "question": "Avez-vous des cours réservés aux femmes ?",
+        "answer": "Nous organisons sur demande des ateliers d'autodéfense pour les femmes. Ce cours convient aux femmes (13 ans et +) de tout niveau de forme physique. Il a été conçu pour fournir une introduction à des compétences pratiques de base en matière d'autodéfense."
+      },
+      "kids-age": {
+        "question": "À quel âge les enfants commencent-ils le Jiu-Jitsu Brésilien ?",
+        "answer": "Chaque enfant est différent. Cependant, nous pensons qu'environ 5 ans est un bon âge pour commencer un art martial tel que le BJJ. Notre programme pour enfants s'adresse aux 5-14 ans et vise à rendre l'autodéfense et l'éducation physique amusantes. Nous utilisons des jeux de conditionnement et axés sur les compétences pour engager et défier les enfants. Les bienfaits vont bien au-delà du physique : courtoisie, confiance, concentration, discipline, travail d'équipe, force mentale et maîtrise de soi."
+      },
+      "strength": {
+        "question": "Dois-je être fort pour pratiquer le Jiu-Jitsu Brésilien ?",
+        "answer": "La beauté du BJJ réside dans son principe fondamental : une personne plus faible et plus petite peut vaincre un adversaire plus fort et plus lourd en utilisant l'effet de levier et la technique."
+      },
+      "bring": {
+        "question": "Que dois-je apporter ?",
+        "answer": "Tout ce dont vous avez besoin pour votre premier cours, ce sont des vêtements confortables. Un t-shirt ajusté ou un rashguard est idéal, et un short sans poche est préférable. Pour les femmes, des collants et un haut sont parfaits. Si vous avez un kimono de Jiu-Jitsu ou « Gi », n'hésitez pas à le porter. Une bouteille d'eau et une petite serviette sont également une bonne idée."
+      },
+      "protection": {
+        "question": "Ai-je besoin d'équipement de protection ?",
+        "answer": "Certains élèves choisissent de porter un protège-dents lorsqu'ils roulent. Cependant, cela dépend entièrement de vous."
+      },
+      "other-academies": {
+        "question": "Accueillez-vous des étudiants d'autres académies ?",
+        "answer": "Nous nous concentrons sur la communauté, pas sur la compétition. Tout le monde est le bienvenu."
+      },
+      "patches": {
+        "question": "J'ai un Gi avec les patchs d'un autre club. Est-ce un problème ?",
+        "answer": "Non, il n'y a aucun problème."
+      }
+    }
+  },
+  "pricing": {
+    "adults": { "title": "Adultes — BJJ & Grappling" },
+    "kids": { "title": "Enfants — BJJ" },
+    "cards": {
+      "single": "Cours unique",
+      "card10": "Carte 10 cours",
+      "monthly": "1 mois"
+    },
+    "currency": "€"
+  },
+  "contact": {
+    "callUs": "Appelez-nous",
+    "whatsapp": "Écrivez-nous sur WhatsApp",
+    "addressLabel": "L'académie",
+    "mapCta": "Afficher la carte",
+    "mapTitle": "The Red Rooster Academy sur Google Maps",
+    "hoursLabel": "Heures d'ouverture",
+    "hoursLink": "Voir le planning"
+  },
+  "footer": {
+    "rights": "Tous droits réservés",
+    "credit": "Réalisé par"
+  },
+  "a11y": {
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "languageSwitcher": "Choisir la langue",
+    "logoAlt": "Logo The Red Rooster Academy",
+    "heroAlt": "Entraînement de Jiu-Jitsu Brésilien à The Red Rooster Academy",
+    "signatureAlt": "Signature de Pierre Henry"
   }
 }
