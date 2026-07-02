@@ -163,11 +163,17 @@
     }
   },
   "pricing": {
+    "heading": "Tarifs",
+    "trial": {
+      "value": "Gratuit",
+      "label": "Premier cours d'essai"
+    },
+    "perMonth": "/ mois",
     "adults": {
-      "title": "Adultes — BJJ & Grappling"
+      "title": "Adultes - BJJ & Grappling"
     },
     "kids": {
-      "title": "Enfants — BJJ"
+      "title": "Enfants - BJJ"
     },
     "cards": {
       "single": "Cours unique",
@@ -177,6 +183,7 @@
     "currency": "€"
   },
   "contact": {
+    "heading": "Contact",
     "callUs": "Appelez-nous",
     "whatsapp": "Écrivez-nous sur WhatsApp",
     "addressLabel": "L'académie",

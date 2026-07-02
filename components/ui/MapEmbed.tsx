@@ -30,13 +30,13 @@ export function MapEmbed() {
   }, [active])
 
   if (!active) {
-    return <div ref={ref} aria-hidden className="h-72 w-full border border-hairline" />
+    return <div ref={ref} aria-hidden className="h-72 w-full border-2 border-paper/20" />
   }
   return (
     <iframe
       src={contact.mapsEmbedUrl}
       title={t('mapTitle')}
-      className="h-72 w-full border-0"
+      className="h-72 w-full border-2 border-paper/20"
       loading="lazy"
       allowFullScreen
       referrerPolicy="no-referrer-when-downgrade"

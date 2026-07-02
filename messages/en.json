@@ -163,11 +163,17 @@
     }
   },
   "pricing": {
+    "heading": "Pricing",
+    "trial": {
+      "value": "Free",
+      "label": "First trial class"
+    },
+    "perMonth": "/ month",
     "adults": {
-      "title": "Adults — BJJ & Grappling"
+      "title": "Adults - BJJ & Grappling"
     },
     "kids": {
-      "title": "Kids — BJJ"
+      "title": "Kids - BJJ"
     },
     "cards": {
       "single": "Single Class",
@@ -177,6 +183,7 @@
     "currency": "€"
   },
   "contact": {
+    "heading": "Contact",
     "callUs": "Call Us",
     "whatsapp": "Message Us on WhatsApp",
     "addressLabel": "The Academy",

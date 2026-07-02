@@ -163,11 +163,17 @@
     }
   },
   "pricing": {
+    "heading": "Tarieven",
+    "trial": {
+      "value": "Gratis",
+      "label": "Eerste proefles"
+    },
+    "perMonth": "/ maand",
     "adults": {
-      "title": "Volwassenen — BJJ & Grappling"
+      "title": "Volwassenen - BJJ & Grappling"
     },
     "kids": {
-      "title": "Kinderen — BJJ"
+      "title": "Kinderen - BJJ"
     },
     "cards": {
       "single": "Losse les",
@@ -177,6 +183,7 @@
     "currency": "€"
   },
   "contact": {
+    "heading": "Contact",
     "callUs": "Bel ons",
     "whatsapp": "Stuur ons een bericht op WhatsApp",
     "addressLabel": "De academie",
