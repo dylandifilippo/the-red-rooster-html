@@ -70,4 +70,10 @@ describe('content integrity', () => {
     const lgUnits = gallery.reduce((sum, g) => sum + (g.span === 1 ? 1 : 2), 0)
     expect(lgUnits % 3).toBe(0)
   })
+  it('keeps the exact span sequence (hole-freeness depends on order, not only on sums)', () => {
+    // Verified by hand against CSS grid auto-placement: this exact sequence
+    // tiles with zero holes at 2 and 3 columns. Reordering entries can leave
+    // holes even when the unit sums above still divide cleanly.
+    expect(gallery.map((g) => g.span)).toEqual([2, 1, 1, 2, 1, 'lg-2'])
+  })
 })

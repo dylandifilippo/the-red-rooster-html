@@ -21,7 +21,7 @@ describe('fr catalog covers content ids', () => {
   })
   it('has name+role for every instructor', () => {
     for (const m of team) {
-      const item = (fr.team as Record<string, { name: string; role: string }>)[m.id]
+      const item = (fr.team as unknown as Record<string, { name: string; role: string }>)[m.id]
       expect(item?.name, m.id).toBeTruthy()
       expect(item?.role, m.id).toBeTruthy()
     }
