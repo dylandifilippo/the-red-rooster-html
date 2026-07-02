@@ -24,6 +24,6 @@ describe('About', () => {
   it('renders no section kicker (no "Nº" chapter number or section title label)', () => {
     setup()
     expect(screen.queryByText(/Nº/)).not.toBeInTheDocument()
-    expect(screen.queryByText(fr.sections.about.title)).not.toBeInTheDocument()
+    expect(screen.queryByText("L'Académie")).not.toBeInTheDocument()
   })
 })

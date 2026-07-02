@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "The Red Rooster Academy — Jiu-Jitsu Brésilien à Charleroi",
+    "title": "The Red Rooster Academy, Jiu-Jitsu Brésilien à Charleroi",
     "description": "Académie de Jiu-Jitsu Brésilien, Grappling et Lutte à Pironchamps (Charleroi). Méthode du Grand-Maître Flavio Behring. Adultes et enfants dès 5 ans."
   },
   "nav": {
@@ -11,45 +11,15 @@
     "faq": "FAQ",
     "pricing": "Tarifs",
     "contact": "Contact",
-    "cta": "Cours d'essai"
+    "cta": "Cours d'essai gratuit"
   },
   "hero": {
     "line1": "Jiu-jitsu",
     "line2": "brésilien",
     "line3": "à Charleroi.",
     "sub": "D'Hélio Gracie à Flavio Behring, une méthode transmise avec rigueur sur les tatamis de Pironchamps.",
-    "cta": "Réserver un cours d'essai",
+    "cta": "Cours d'essai gratuit",
     "scheduleCta": "Voir les horaires"
-  },
-  "sections": {
-    "about": {
-      "number": "Nº 01",
-      "title": "L'Académie"
-    },
-    "programs": {
-      "number": "Nº 02",
-      "title": "Les Programmes"
-    },
-    "instructors": {
-      "number": "Nº 03",
-      "title": "Les Instructeurs"
-    },
-    "schedule": {
-      "number": "Nº 04",
-      "title": "Le Planning"
-    },
-    "faq": {
-      "number": "Nº 05",
-      "title": "Foire Aux Questions"
-    },
-    "pricing": {
-      "number": "Nº 06",
-      "title": "Les Tarifs"
-    },
-    "contact": {
-      "number": "Nº 07",
-      "title": "Contact"
-    }
   },
   "about": {
     "lead": "The Red Rooster Academy est une équipe d'entraînement de Jiu-Jitsu Brésilien basée dans la région de Charleroi, suivant la méthode du Grand-Maître Flavio Behring.",
@@ -115,7 +85,7 @@
   },
   "schedule": {
     "heading": "La semaine type",
-    "note": "Premier cours d'essai gratuit — présentez-vous simplement 10 minutes avant le début."
+    "note": "Premier cours d'essai gratuit, présentez-vous simplement 10 minutes avant le début."
   },
   "faq": {
     "heading": "Foire Aux Questions",

@@ -19,7 +19,7 @@ describe('Schedule section', () => {
     setup()
     expect(screen.getByRole('heading', { level: 2, name: fr.schedule.heading })).toBeInTheDocument()
     expect(screen.queryByText(/Nº/)).not.toBeInTheDocument()
-    expect(screen.queryByText(fr.sections.schedule.title)).not.toBeInTheDocument()
+    expect(screen.queryByText('Le Planning')).not.toBeInTheDocument()
   })
 
   it('renders a desktop table with a column for every day and a row for every unique start time', () => {

@@ -31,7 +31,7 @@ export function Faq() {
                     <span className="text-[17px] font-bold text-ink">{t(`items.${id}.question`)}</span>
                     <span
                       aria-hidden
-                      className={`text-2xl font-bold leading-none text-accent transition-transform ${open ? 'rotate-45' : ''}`}
+                      className={`text-2xl font-bold leading-none text-accent transition-transform motion-reduce:transition-none ${open ? 'rotate-45' : ''}`}
                     >
                       +
                     </span>

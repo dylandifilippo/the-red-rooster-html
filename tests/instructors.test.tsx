@@ -21,7 +21,7 @@ describe('Instructors', () => {
   it('renders no section kicker (no "Nº" chapter number or section title label)', () => {
     setup()
     expect(screen.queryByText(/Nº/)).not.toBeInTheDocument()
-    expect(screen.queryByText(fr.sections.instructors.title)).not.toBeInTheDocument()
+    expect(screen.queryByText('Les Instructeurs')).not.toBeInTheDocument()
   })
 
   it('renders all three team members with name and role', () => {

@@ -17,7 +17,7 @@ describe('FAQ accordion', () => {
   it('renders the heading and 10 collapsed questions as buttons, no kicker', () => {
     setup()
     expect(screen.getByRole('heading', { name: fr.faq.heading })).toBeInTheDocument()
-    expect(screen.queryByText(fr.sections.faq.number)).not.toBeInTheDocument()
+    expect(screen.queryByText('Nº 05')).not.toBeInTheDocument()
     const buttons = screen.getAllByRole('button')
     expect(buttons).toHaveLength(10)
     for (const b of buttons) expect(b).toHaveAttribute('aria-expanded', 'false')

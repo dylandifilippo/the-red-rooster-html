@@ -34,7 +34,7 @@ export function Nav() {
             </a>
           ))}
           <LanguageSwitcher />
-          <a href="#contact" className="inline-block bg-ink px-[18px] py-[10px] text-[13px] font-bold text-paper transition-colors hover:bg-ink/90">
+          <a href="#contact" className="inline-block bg-ink px-4.5 py-2.5 text-[13px] font-bold text-paper transition-colors hover:bg-ink/90">
             {t('cta')}
           </a>
         </nav>
@@ -63,7 +63,7 @@ export function Nav() {
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="inline-block bg-accent px-[18px] py-[10px] text-[13px] font-bold text-white"
+                className="inline-block bg-accent px-4.5 py-2.5 text-[13px] font-bold text-white"
               >
                 {t('cta')}
               </a>

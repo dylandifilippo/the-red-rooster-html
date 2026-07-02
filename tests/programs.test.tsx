@@ -21,7 +21,7 @@ describe('Programs', () => {
   it('renders no section kicker (no "Nº" chapter number or section title label)', () => {
     setup()
     expect(screen.queryByText(/Nº/)).not.toBeInTheDocument()
-    expect(screen.queryByText(fr.sections.programs.title)).not.toBeInTheDocument()
+    expect(screen.queryByText('Les Programmes')).not.toBeInTheDocument()
   })
 
   it('renders all four programs with their title and description', () => {
