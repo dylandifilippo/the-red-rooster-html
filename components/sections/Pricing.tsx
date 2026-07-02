@@ -27,7 +27,7 @@ export function Pricing() {
           <div className="grid gap-[2px] border-2 border-[#3a3835] bg-[#3a3835] lg:grid-cols-3">
             <div className="flex flex-col justify-center gap-2 bg-accent px-8 py-10">
               <p className="font-poster text-[44px] leading-none text-white">{t('trial.value')}</p>
-              <p className="text-[14px] text-accent-soft">{t('trial.label')}</p>
+              <p className="text-[14px] text-white">{t('trial.label')}</p>
             </div>
             <div className="flex flex-col justify-center gap-2 bg-ink px-8 py-10">
               <p className="flex items-baseline gap-2">

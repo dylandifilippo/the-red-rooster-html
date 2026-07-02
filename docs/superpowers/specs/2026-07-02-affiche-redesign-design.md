@@ -40,7 +40,7 @@ the image-forward asymmetric program grid.
 --color-paper-soft:#e9e7e1;/* hover fills on paper */
 --color-accent:  #c8452e;  /* THE red: large type, fills, borders */
 --color-paper-muted:#9b968e; /* secondary text on ink band (5.4:1 on ink) */
---color-accent-soft:#ffd9d0; /* secondary text on accent fills */
+--color-accent-soft:#ffd9d0; /* on accent fills: LARGE/bold text only (3.7:1); small text on accent is white (4.83:1) */
 ```
 
 Contrast rules (hard):

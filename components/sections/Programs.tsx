@@ -30,7 +30,7 @@ export function Programs() {
                 {isLutte ? (
                   <div className="flex h-full flex-col justify-end p-5">
                     <h3 className="font-poster text-2xl text-white">{t('lutte.title')}</h3>
-                    <p className="mt-1 text-[13.5px] leading-snug text-accent-soft">{t('lutte.description')}</p>
+                    <p className="mt-1 text-[13.5px] leading-snug text-white">{t('lutte.description')}</p>
                   </div>
                 ) : (
                   <>
