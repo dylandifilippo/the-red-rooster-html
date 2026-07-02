@@ -8,12 +8,12 @@ export function Hero() {
   return (
     <section id="top" className="bg-paper pt-24">
       <HeroIntro className="mx-auto max-w-7xl px-6 pb-16">
-        <h1 className="break-words font-poster text-[clamp(52px,9vw,150px)] leading-[0.9]">
-          <span className="hero-line block text-ink">{t('line1')}</span>
-          <span className="hero-line block text-transparent [-webkit-text-stroke:2px_var(--color-ink)]">
+        <h1 className="font-poster text-[clamp(52px,9vw,150px)] max-[540px]:text-[8.6vw] leading-[0.9]">
+          <span className="hero-line block whitespace-nowrap text-ink">{t('line1')}</span>
+          <span className="hero-line block whitespace-nowrap text-transparent [-webkit-text-stroke:2px_var(--color-ink)]">
             {t('line2')}
           </span>
-          <span className="hero-line block text-accent">{t('line3')}</span>
+          <span className="hero-line block whitespace-nowrap text-accent">{t('line3')}</span>
         </h1>
         <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_1.2fr]">
           <div className="flex flex-col justify-center">
