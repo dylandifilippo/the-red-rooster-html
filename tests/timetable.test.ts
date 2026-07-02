@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { schedule } from '../content/schedule'
 import { timetableRows, isKidsSlot } from '../lib/timetable'
+import type { DaySchedule } from '../content/types'
 
 describe('timetableRows', () => {
   const rows = timetableRows()
@@ -34,6 +35,33 @@ describe('timetableRows', () => {
         expect(cell !== null).toBe(hasSlot)
       })
     }
+  })
+})
+
+describe('timetableRows duplicate-start guard', () => {
+  it('throws, naming the day and time, when a day has two slots with the same start', () => {
+    const duplicateSchedule: DaySchedule[] = [
+      {
+        day: 'monday',
+        slots: [
+          { programId: 'bjj-kids', start: '18:30', end: '19:30' },
+          { programId: 'bjj-adults', start: '18:30', end: '20:00' },
+        ],
+      },
+    ]
+
+    expect(() => timetableRows(duplicateSchedule)).toThrowError(
+      'timetableRows: duplicate start 18:30 on monday',
+    )
+  })
+
+  it('does not throw for a schedule with no duplicate starts within a day', () => {
+    const okSchedule: DaySchedule[] = [
+      { day: 'monday', slots: [{ programId: 'bjj-kids', start: '18:30', end: '19:30' }] },
+      { day: 'tuesday', slots: [{ programId: 'lutte', start: '18:30', end: '19:30' }] },
+    ]
+
+    expect(() => timetableRows(okSchedule)).not.toThrow()
   })
 })
 

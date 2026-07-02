@@ -56,12 +56,29 @@ describe('Schedule section', () => {
     })
   })
 
-  it('keeps an aria-hidden mobile card variant so the table stays the single a11y source', () => {
+  it('keeps a mobile card variant, exposed to assistive tech (not aria-hidden), for below-lg viewports', () => {
     const { container } = setup()
-    const mobile = container.querySelector('[aria-hidden="true"]')
+    const mobile = container.querySelector('.lg\\:hidden')
     expect(mobile).toBeTruthy()
+    expect(mobile).not.toHaveAttribute('aria-hidden')
     // The mobile variant repeats every day heading and program name.
     expect(within(mobile as HTMLElement).getAllByText('BJJ Adultes').length).toBeGreaterThan(0)
+  })
+
+  it('renders mobile card slots in chronological order within each day, regardless of content order', () => {
+    const { container } = setup()
+    const mobile = container.querySelector('.lg\\:hidden') as HTMLElement
+    schedule.forEach((day) => {
+      const expectedStarts = [...day.slots].map((s) => s.start).sort()
+      const dayCard = within(mobile)
+        .getAllByText(fr.days[day.day])
+        .map((el) => el.closest('div'))
+        .find(Boolean) as HTMLElement
+      const starts = within(dayCard)
+        .getAllByRole('listitem')
+        .map((li) => li.querySelector('.font-mono')?.textContent)
+      expect(starts).toEqual(expectedStarts)
+    })
   })
 
   it('renders the free trial note', () => {

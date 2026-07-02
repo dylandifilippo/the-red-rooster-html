@@ -32,9 +32,9 @@ export function Schedule() {
         <h2 className="font-poster text-[clamp(34px,4.4vw,64px)] text-ink">{t('heading')}</h2>
 
         {/* Desktop: a real table, derived from content/schedule.ts (rows =
-            sorted unique start times, columns = days in content order). The
-            single accessible source; the mobile cards below repeat this
-            data with aria-hidden. */}
+            sorted unique start times, columns = days in content order).
+            Hidden below `lg` via `hidden lg:table`, which removes it from
+            the a11y tree there too — see the mobile cards below. */}
         <TimetableSweep className="mt-12 overflow-x-auto border-2 border-ink bg-white">
           <table className="hidden w-full border-collapse lg:table">
             <caption className="sr-only">{t('heading')}</caption>
@@ -78,22 +78,29 @@ export function Schedule() {
         </TimetableSweep>
 
         {/* Mobile (< lg): per-day stacked cards, same fill coding, derived
-            from the same data. Hidden from assistive tech: the table above
-            stays the single accessible source, this is a visual-only dupe. */}
-        <div aria-hidden="true" className="mt-12 flex flex-col gap-6 lg:hidden">
+            from the same data. `hidden lg:table` above already removes the
+            desktop table from the a11y tree below `lg`, and `lg:hidden`
+            below removes these cards from it at `lg` and up, so exactly one
+            variant is ever exposed to assistive tech — neither should carry
+            an unconditional aria-hidden. Slots are sorted by start so the
+            card order always matches the desktop table's chronological
+            rows, regardless of content order. */}
+        <div className="mt-12 flex flex-col gap-6 lg:hidden">
           {schedule.map((day) => (
             <div key={day.day} className="border-2 border-ink bg-white">
               <p className="font-poster bg-ink px-4 py-3 text-xl text-paper">{tDays(day.day)}</p>
               <ul className="divide-y divide-[#dedbd3]">
-                {day.slots.map((slot) => (
-                  <li
-                    key={`${slot.programId}-${slot.start}`}
-                    className={`flex items-center justify-between gap-4 px-4 py-3 text-[14.5px] ${fillClass(slot)}`}
-                  >
-                    <span className="font-mono font-semibold">{slot.start}</span>
-                    <span className="font-bold">{tPrograms(`${slot.programId}.title`)}</span>
-                  </li>
-                ))}
+                {[...day.slots]
+                  .sort((a, b) => a.start.localeCompare(b.start))
+                  .map((slot) => (
+                    <li
+                      key={`${slot.programId}-${slot.start}`}
+                      className={`flex items-center justify-between gap-4 px-4 py-3 text-[14.5px] ${fillClass(slot)}`}
+                    >
+                      <span className="font-mono font-semibold">{slot.start}</span>
+                      <span className="font-bold">{tPrograms(`${slot.programId}.title`)}</span>
+                    </li>
+                  ))}
               </ul>
             </div>
           ))}
