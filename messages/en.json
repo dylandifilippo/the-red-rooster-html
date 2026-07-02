@@ -22,13 +22,34 @@
     "ctaSecondary": "View the Schedule"
   },
   "sections": {
-    "about": { "number": "Nº 01", "title": "The Academy" },
-    "programs": { "number": "Nº 02", "title": "The Programs" },
-    "instructors": { "number": "Nº 03", "title": "The Instructors" },
-    "schedule": { "number": "Nº 04", "title": "The Schedule" },
-    "faq": { "number": "Nº 05", "title": "Frequently Asked Questions" },
-    "pricing": { "number": "Nº 06", "title": "Pricing" },
-    "contact": { "number": "Nº 07", "title": "Contact" }
+    "about": {
+      "number": "Nº 01",
+      "title": "The Academy"
+    },
+    "programs": {
+      "number": "Nº 02",
+      "title": "The Programs"
+    },
+    "instructors": {
+      "number": "Nº 03",
+      "title": "The Instructors"
+    },
+    "schedule": {
+      "number": "Nº 04",
+      "title": "The Schedule"
+    },
+    "faq": {
+      "number": "Nº 05",
+      "title": "Frequently Asked Questions"
+    },
+    "pricing": {
+      "number": "Nº 06",
+      "title": "Pricing"
+    },
+    "contact": {
+      "number": "Nº 07",
+      "title": "Contact"
+    }
   },
   "about": {
     "lead": "The Red Rooster Academy is a Brazilian Jiu-Jitsu training team based in the Charleroi region, following the method of Grandmaster Flavio Behring.",
@@ -127,8 +148,12 @@
     }
   },
   "pricing": {
-    "adults": { "title": "Adults — BJJ & Grappling" },
-    "kids": { "title": "Kids — BJJ" },
+    "adults": {
+      "title": "Adults — BJJ & Grappling"
+    },
+    "kids": {
+      "title": "Kids — BJJ"
+    },
     "cards": {
       "single": "Single Class",
       "card10": "10-Class Card",
@@ -153,7 +178,6 @@
     "closeMenu": "Close menu",
     "languageSwitcher": "Choose language",
     "logoAlt": "The Red Rooster Academy logo",
-    "heroAlt": "Brazilian Jiu-Jitsu training at The Red Rooster Academy",
-    "signatureAlt": "Signature of Pierre Henry"
+    "heroAlt": "Brazilian Jiu-Jitsu training at The Red Rooster Academy"
   }
 }

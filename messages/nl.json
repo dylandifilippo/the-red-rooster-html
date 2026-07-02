@@ -22,13 +22,34 @@
     "ctaSecondary": "Bekijk het rooster"
   },
   "sections": {
-    "about": { "number": "Nº 01", "title": "De Academie" },
-    "programs": { "number": "Nº 02", "title": "De Programma's" },
-    "instructors": { "number": "Nº 03", "title": "De Instructeurs" },
-    "schedule": { "number": "Nº 04", "title": "Het Rooster" },
-    "faq": { "number": "Nº 05", "title": "Veelgestelde Vragen" },
-    "pricing": { "number": "Nº 06", "title": "De Tarieven" },
-    "contact": { "number": "Nº 07", "title": "Contact" }
+    "about": {
+      "number": "Nº 01",
+      "title": "De Academie"
+    },
+    "programs": {
+      "number": "Nº 02",
+      "title": "De Programma's"
+    },
+    "instructors": {
+      "number": "Nº 03",
+      "title": "De Instructeurs"
+    },
+    "schedule": {
+      "number": "Nº 04",
+      "title": "Het Rooster"
+    },
+    "faq": {
+      "number": "Nº 05",
+      "title": "Veelgestelde Vragen"
+    },
+    "pricing": {
+      "number": "Nº 06",
+      "title": "De Tarieven"
+    },
+    "contact": {
+      "number": "Nº 07",
+      "title": "Contact"
+    }
   },
   "about": {
     "lead": "The Red Rooster Academy is een trainingsteam voor Braziliaans Jiu-Jitsu uit de regio Charleroi, dat de methode van Grootmeester Flavio Behring volgt.",
@@ -127,8 +148,12 @@
     }
   },
   "pricing": {
-    "adults": { "title": "Volwassenen — BJJ & Grappling" },
-    "kids": { "title": "Kinderen — BJJ" },
+    "adults": {
+      "title": "Volwassenen — BJJ & Grappling"
+    },
+    "kids": {
+      "title": "Kinderen — BJJ"
+    },
     "cards": {
       "single": "Losse les",
       "card10": "10-lessenkaart",
@@ -153,7 +178,6 @@
     "closeMenu": "Menu sluiten",
     "languageSwitcher": "Taal kiezen",
     "logoAlt": "Logo van The Red Rooster Academy",
-    "heroAlt": "Training Braziliaans Jiu-Jitsu bij The Red Rooster Academy",
-    "signatureAlt": "Handtekening van Pierre Henry"
+    "heroAlt": "Training Braziliaans Jiu-Jitsu bij The Red Rooster Academy"
   }
 }

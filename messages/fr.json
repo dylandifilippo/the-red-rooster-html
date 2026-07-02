@@ -22,13 +22,34 @@
     "ctaSecondary": "Voir le planning"
   },
   "sections": {
-    "about": { "number": "Nº 01", "title": "L'Académie" },
-    "programs": { "number": "Nº 02", "title": "Les Programmes" },
-    "instructors": { "number": "Nº 03", "title": "Les Instructeurs" },
-    "schedule": { "number": "Nº 04", "title": "Le Planning" },
-    "faq": { "number": "Nº 05", "title": "Foire Aux Questions" },
-    "pricing": { "number": "Nº 06", "title": "Les Tarifs" },
-    "contact": { "number": "Nº 07", "title": "Contact" }
+    "about": {
+      "number": "Nº 01",
+      "title": "L'Académie"
+    },
+    "programs": {
+      "number": "Nº 02",
+      "title": "Les Programmes"
+    },
+    "instructors": {
+      "number": "Nº 03",
+      "title": "Les Instructeurs"
+    },
+    "schedule": {
+      "number": "Nº 04",
+      "title": "Le Planning"
+    },
+    "faq": {
+      "number": "Nº 05",
+      "title": "Foire Aux Questions"
+    },
+    "pricing": {
+      "number": "Nº 06",
+      "title": "Les Tarifs"
+    },
+    "contact": {
+      "number": "Nº 07",
+      "title": "Contact"
+    }
   },
   "about": {
     "lead": "The Red Rooster Academy est une équipe d'entraînement de Jiu-Jitsu Brésilien basée dans la région de Charleroi, suivant la méthode du Grand-Maître Flavio Behring.",
@@ -127,8 +148,12 @@
     }
   },
   "pricing": {
-    "adults": { "title": "Adultes — BJJ & Grappling" },
-    "kids": { "title": "Enfants — BJJ" },
+    "adults": {
+      "title": "Adultes — BJJ & Grappling"
+    },
+    "kids": {
+      "title": "Enfants — BJJ"
+    },
     "cards": {
       "single": "Cours unique",
       "card10": "Carte 10 cours",
@@ -153,7 +178,6 @@
     "closeMenu": "Fermer le menu",
     "languageSwitcher": "Choisir la langue",
     "logoAlt": "Logo The Red Rooster Academy",
-    "heroAlt": "Entraînement de Jiu-Jitsu Brésilien à The Red Rooster Academy",
-    "signatureAlt": "Signature de Pierre Henry"
+    "heroAlt": "Entraînement de Jiu-Jitsu Brésilien à The Red Rooster Academy"
   }
 }
