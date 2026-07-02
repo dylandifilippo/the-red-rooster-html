@@ -28,6 +28,12 @@ behind `prefers-reduced-motion` guards. Spec: `docs/superpowers/specs/`.
 ## Commands
 `npm run dev` · `npm test` · `npm run build` · `npm run lint`
 
+## Browser QA
+Use the Claude in Chrome extension (claude-in-chrome MCP tools) via a Sonnet
+subagent, in a separate browser window. Never install puppeteer/playwright or
+other headless browser tooling — this is a single-page site.
+
 ## Branches
-`redesign` = active development. `gh-pages` = OLD live site (do not touch until DNS
-cutover — see `docs/deployment.md`). `main` = merge target at launch.
+`redesign-taste` = active development (Affiche redesign, supersedes `redesign`).
+`gh-pages` = OLD live site (do not touch until DNS cutover — see
+`docs/deployment.md`). `main` = merge target at launch.
