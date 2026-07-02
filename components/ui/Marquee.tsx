@@ -1,18 +1,17 @@
 import { useTranslations } from 'next-intl'
-import { programs } from '@/content/programs'
 
 export function Marquee() {
-  const t = useTranslations('programs')
-  const names = programs.map((p) => t(`${p.id}.title`))
+  const t = useTranslations('marquee')
+  const words = t.raw('words') as string[]
   return (
     <div aria-hidden="true" className="overflow-hidden border-y-2 border-ink py-4">
       <div className="marquee-track flex w-max">
         {[0, 1].map((half) => (
           <div key={half} className="flex shrink-0 gap-16 pr-16">
-            {[0, 1, 2].map((rep) =>
-              names.map((n, i) => (
-                <span key={`${rep}-${n}`} className={`font-poster text-xl ${i % 2 ? 'text-accent' : 'text-ink'}`}>
-                  {n}
+            {[0, 1].map((rep) =>
+              words.map((w, i) => (
+                <span key={`${rep}-${w}`} className={`font-poster text-xl ${i % 2 ? 'text-accent' : 'text-ink'}`}>
+                  {w}
                 </span>
               )),
             )}

@@ -32,12 +32,12 @@ describe('Programs', () => {
     }
   })
 
-  it('renders images for the three photo programs only, none for lutte', () => {
+  it('renders images for all four programs, including lutte', () => {
     setup()
     expect(screen.getByAltText(fr.programs['bjj-adults'].title)).toBeInTheDocument()
     expect(screen.getByAltText(fr.programs['bjj-kids'].title)).toBeInTheDocument()
     expect(screen.getByAltText(fr.programs['grappling'].title)).toBeInTheDocument()
-    expect(screen.queryByAltText(fr.programs['lutte'].title)).not.toBeInTheDocument()
-    expect(screen.getAllByRole('img')).toHaveLength(3)
+    expect(screen.getByAltText(fr.programs['lutte'].title)).toBeInTheDocument()
+    expect(screen.getAllByRole('img')).toHaveLength(4)
   })
 })

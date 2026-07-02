@@ -15,8 +15,8 @@ export function Hero() {
           </span>
           <span className="hero-line block whitespace-nowrap text-accent">{t('line3')}</span>
         </h1>
-        <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_1.2fr]">
-          <div className="flex flex-col justify-center">
+        <div className="relative mt-10 lg:mt-14">
+          <div className="hero-panel flex flex-col justify-center lg:absolute lg:bottom-10 lg:left-0 lg:z-10 lg:max-w-[420px] lg:border-2 lg:border-ink lg:bg-paper lg:p-8">
             <p className="max-w-[40ch] text-[17px] text-ink-soft">{t('sub')}</p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a href="#contact" className="bg-accent px-8 py-4 font-bold text-white transition-colors hover:bg-[#a93a26]">
@@ -27,14 +27,14 @@ export function Hero() {
               </a>
             </div>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden border-2 border-ink lg:aspect-auto">
+          <div className="hero-frame relative w-full overflow-hidden border-2 border-ink aspect-[4/3] lg:aspect-[16/9] lg:w-[76%] lg:ml-auto">
             <Image
               src="/images/hero.jpg"
               alt={ta('heroAlt')}
               width={2560}
               height={1920}
               priority
-              sizes="(min-width: 1024px) 55vw, 92vw"
+              sizes="(min-width: 1024px) 72vw, 92vw"
               className="hero-image absolute left-0 -top-[17%] h-[120%] w-full object-cover"
             />
           </div>

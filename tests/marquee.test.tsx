@@ -11,29 +11,25 @@ describe('Marquee', () => {
         <Marquee />
       </NextIntlClientProvider>,
     )
-    const [firstMatch] = screen.getAllByText(fr.programs['bjj-adults'].title)
+    const [firstMatch] = screen.getAllByText(fr.marquee.words[0])
     const wrapper = firstMatch.closest('[aria-hidden]')
     expect(wrapper).toHaveAttribute('aria-hidden', 'true')
   })
 
-  it('renders each discipline name six times (2 halves x 3 reps, duplicated track for the loop)', () => {
+  it('renders each technique word four times (2 halves x 2 reps, duplicated track for the loop)', () => {
     render(
       <NextIntlClientProvider locale="fr" messages={fr}>
         <Marquee />
       </NextIntlClientProvider>,
     )
-    const names = [
-      fr.programs['bjj-adults'].title,
-      fr.programs['bjj-kids'].title,
-      fr.programs['grappling'].title,
-      fr.programs['lutte'].title,
-    ]
+    const words = fr.marquee.words
     let total = 0
-    for (const name of names) {
-      const matches = screen.getAllByText(name)
-      expect(matches).toHaveLength(6)
+    for (const word of words) {
+      const matches = screen.getAllByText(word)
+      expect(matches).toHaveLength(4)
       total += matches.length
     }
-    expect(total).toBe(24)
+    expect(words).toHaveLength(8)
+    expect(total).toBe(32)
   })
 })

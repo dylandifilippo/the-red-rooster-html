@@ -46,6 +46,9 @@
       "description": "Amenées au sol, posture et pression : la base debout qui complète le travail au sol."
     }
   },
+  "marquee": {
+    "words": ["Garde", "Passage de garde", "Balayage", "Contrôle", "Étranglement", "Armlock", "Triangle", "Kimura"]
+  },
   "team": {
     "heading": "L'équipe",
     "pierre": {

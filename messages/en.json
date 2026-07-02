@@ -46,6 +46,9 @@
       "description": "Takedowns, posture and pressure: the standing foundation that rounds out the ground game."
     }
   },
+  "marquee": {
+    "words": ["Guard", "Guard pass", "Sweep", "Control", "Choke", "Armlock", "Triangle", "Kimura"]
+  },
   "team": {
     "heading": "The team",
     "pierre": {

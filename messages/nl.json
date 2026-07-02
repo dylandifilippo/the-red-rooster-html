@@ -46,6 +46,9 @@
       "description": "Takedowns, houding en druk: de stand-up basis die het grondwerk aanvult."
     }
   },
+  "marquee": {
+    "words": ["Guard", "Guard pass", "Sweep", "Controle", "Verwurging", "Armlock", "Triangle", "Kimura"]
+  },
   "team": {
     "heading": "Het team",
     "pierre": {
