@@ -3,7 +3,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
-import { archivo, playfair } from '@/lib/fonts'
+import { archivo } from '@/lib/fonts'
 import '../globals.css'
 
 export function generateStaticParams() {
@@ -37,7 +37,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   if (!hasLocale(routing.locales, locale)) notFound()
   setRequestLocale(locale)
   return (
-    <html lang={locale} className={`${archivo.variable} ${playfair.variable}`}>
+    <html lang={locale} className={archivo.variable}>
       <body>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>

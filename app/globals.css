@@ -1,15 +1,22 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-canvas: #141210;
-  --color-canvas-raised: #1c1916;
-  --color-ink: #ece5da;
-  --color-ink-muted: #a89f92;
+  --color-paper: #f2f1ed;
+  --color-ink: #161513;
+  --color-ink-soft: #4c4a45;
+  --color-paper-soft: #e9e7e1;
   --color-accent: #c8452e;
-  --color-accent-bright: #e05c42;
-  --color-hairline: rgb(236 229 218 / 0.18);
+  --color-paper-muted: #9b968e;
+  --color-accent-soft: #ffd9d0;
+
+  /* Aliases for old dark-theme tokens — components still reference these
+     until Task 12 migrates them off. Remove once all usages are gone. */
+  --color-canvas: #f2f1ed;
+  --color-ink-muted: #4c4a45;
+  --color-accent-bright: #c8452e;
+  --color-hairline: rgb(22 21 19 / 0.15);
+
   --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
-  --font-serif-display: var(--font-playfair), ui-serif, Georgia, serif;
 }
 
 html {
@@ -21,7 +28,7 @@ html {
 }
 
 body {
-  background: var(--color-canvas);
+  background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-sans);
 }
@@ -33,4 +40,18 @@ body {
 
 section[id] {
   scroll-margin-top: 5.5rem;
+}
+
+@utility font-poster {
+  font-family: var(--font-archivo);
+  font-stretch: 125%;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.92;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .marquee-track { animation: marquee 28s linear infinite; }
+  @keyframes marquee { to { transform: translateX(-50%); } }
 }

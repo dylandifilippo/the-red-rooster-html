@@ -16,12 +16,14 @@ Next.js 16 · React 19 · TypeScript strict · Tailwind CSS 4 (tokens in `app/gl
 - Photos live in `public/images/`; swap files, keep paths (or update `content/*.ts`).
 
 ## Design system
-Dark editorial: canvas `#141210`, ink `#ece5da`, accent `#c8452e`. Playfair Display for
-headlines (`font-serif-display`), Archivo for UI (`font-sans`). Numbered chapter
-sections ("Nº 01"). Motion is GSAP scroll reveals only, always behind
-`prefers-reduced-motion` guards. Spec: `docs/superpowers/specs/`.
-Accent for text is `--color-accent-bright` (#e05c42, WCAG AA on canvas); `--color-accent`
-(#c8452e) is for backgrounds/borders only.
+"Affiche" poster theme, single light theme (locked): paper `#f2f1ed`, ink `#161513`,
+accent `#c8452e`. Red is never body text — use it only as display type ≥30px, fills
+behind white text, or borders. One deliberate full-dark color block (paper on ink) at
+the end of the page. One font: Archivo variable (`--font-archivo`, axes wght + wdth).
+`font-poster` utility (display headlines) = `font-stretch: 125%`, `font-weight: 900`,
+uppercase, tight tracking; body/UI text uses normal-width Archivo (`font-sans`). Radius
+0 everywhere; borders are 2px solid ink. Motion is GSAP scroll reveals only, always
+behind `prefers-reduced-motion` guards. Spec: `docs/superpowers/specs/`.
 
 ## Commands
 `npm run dev` · `npm test` · `npm run build` · `npm run lint`

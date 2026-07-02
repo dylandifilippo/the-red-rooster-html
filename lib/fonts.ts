@@ -1,12 +1,8 @@
-import { Archivo, Playfair_Display } from 'next/font/google'
-
-export const playfair = Playfair_Display({
-  subsets: ['latin'],
-  style: ['normal', 'italic'],
-  variable: '--font-playfair',
-})
+import { Archivo } from 'next/font/google'
 
 export const archivo = Archivo({
   subsets: ['latin'],
+  axes: ['wdth'],
   variable: '--font-archivo',
+  display: 'swap',
 })
