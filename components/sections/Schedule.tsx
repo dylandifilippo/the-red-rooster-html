@@ -9,7 +9,7 @@ export function Schedule() {
   const t = useTranslations('schedule')
   return (
     <section id="schedule" className="border-t border-hairline">
-      <div className="mx-auto max-w-6xl px-6 py-20">
+      <div className="mx-auto max-w-7xl px-6 py-20">
         <SectionHeading id="schedule" />
         <Reveal>
           <dl className="divide-y divide-hairline border-y border-hairline">

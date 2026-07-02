@@ -7,7 +7,7 @@ export function Pricing() {
   const t = useTranslations('pricing')
   return (
     <section id="pricing" className="border-t border-hairline">
-      <div className="mx-auto max-w-6xl px-6 py-20">
+      <div className="mx-auto max-w-7xl px-6 py-20">
         <SectionHeading id="pricing" />
         <Reveal className="grid gap-14 lg:grid-cols-2">
           {pricing.map((group) => (
@@ -19,7 +19,7 @@ export function Pricing() {
                     <dt className="font-sans text-sm">{t(`cards.${card.id}`)}</dt>
                     <dd className="font-serif-display text-3xl">
                       {card.price}
-                      <span className="ml-1 text-lg text-accent">{t('currency')}</span>
+                      <span className="ml-1 text-lg text-accent-bright">{t('currency')}</span>
                     </dd>
                   </div>
                 ))}

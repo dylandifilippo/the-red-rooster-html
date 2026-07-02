@@ -14,7 +14,7 @@ export function LanguageSwitcher() {
           key={l}
           href={l === routing.defaultLocale ? '/' : `/${l}`}
           aria-current={l === locale ? 'true' : undefined}
-          className={l === locale ? 'text-accent' : 'text-ink-muted transition-colors hover:text-ink'}
+          className={l === locale ? 'text-accent-bright' : 'text-ink-muted transition-colors hover:text-ink'}
         >
           {LABELS[l]}
         </a>

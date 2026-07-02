@@ -8,7 +8,7 @@ export function About() {
   const ta = useTranslations('a11y')
   return (
     <section id="about" className="border-t border-hairline">
-      <div className="mx-auto max-w-6xl px-6 py-20">
+      <div className="mx-auto max-w-7xl px-6 py-20">
         <SectionHeading id="about" />
         <Reveal className="grid gap-10 lg:grid-cols-2">
           <p className="font-serif-display text-2xl leading-snug">{t('lead')}</p>

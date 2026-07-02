@@ -7,11 +7,11 @@ export function Hero() {
   const t = useTranslations('hero')
   const ta = useTranslations('a11y')
   return (
-    <section id="top" className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-20 pt-36 lg:grid-cols-[1.2fr_1fr]">
+    <section id="top" className="mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 pt-36 lg:grid-cols-[1.2fr_1fr]">
       <div>
-        <p className="font-sans text-[11px] uppercase tracking-[0.4em] text-accent">{t('location')}</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.4em] text-accent-bright">{t('location')}</p>
         <h1 className="mt-5 font-serif-display text-5xl leading-[1.1] font-medium lg:text-6xl">
-          {t.rich('headline', { em: (chunks) => <em className="text-accent">{chunks}</em> })}
+          {t.rich('headline', { em: (chunks) => <em className="text-accent-bright">{chunks}</em> })}
         </h1>
         <p className="mt-6 max-w-md font-sans text-sm leading-relaxed text-ink-muted">{t('sub')}</p>
         <div className="mt-9 flex flex-wrap gap-4">
@@ -22,7 +22,15 @@ export function Hero() {
       <figure className="relative">
         <div className="overflow-hidden">
           <Parallax>
-            <Image src="/images/hero.jpg" alt={ta('heroAlt')} width={1920} height={1080} priority className="h-auto w-full scale-110 object-cover" />
+            <Image
+              src="/images/hero.jpg"
+              alt={ta('heroAlt')}
+              width={1920}
+              height={1080}
+              priority
+              sizes="(min-width: 1024px) 45vw, 92vw"
+              className="h-auto w-full scale-110 object-cover"
+            />
           </Parallax>
         </div>
         <figcaption className="absolute -bottom-3 -left-3 bg-accent px-4 py-2 font-sans text-[10px] uppercase tracking-[0.25em] text-white">

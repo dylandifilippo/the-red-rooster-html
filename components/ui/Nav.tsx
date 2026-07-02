@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { LanguageSwitcher } from './LanguageSwitcher'
@@ -11,9 +11,21 @@ export function Nav() {
   const t = useTranslations('nav')
   const ta = useTranslations('a11y')
   const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    if (!open) return
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = previousOverflow
+    }
+  }, [open])
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-hairline bg-canvas/90 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 flex flex-col border-b border-hairline backdrop-blur ${open ? 'h-dvh bg-canvas' : 'bg-canvas/90'}`}
+    >
+      <div className="mx-auto flex w-full max-w-7xl shrink-0 items-center justify-between gap-6 px-6 py-4">
         <a href="#top" className="flex items-center gap-3">
           <Image src="/images/logo.png" alt={ta('logoAlt')} width={163} height={28} className="h-7 w-auto" />
         </a>
@@ -38,7 +50,7 @@ export function Nav() {
         </button>
       </div>
       {open && (
-        <nav className="border-t border-hairline px-6 py-6 lg:hidden">
+        <nav className="min-h-0 flex-1 overflow-y-auto border-t border-hairline bg-canvas px-6 py-6 lg:hidden">
           <ul className="flex flex-col gap-4">
             {ANCHORS.map((a) => (
               <li key={a}>

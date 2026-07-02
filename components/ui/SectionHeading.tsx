@@ -6,7 +6,7 @@ export function SectionHeading({ id }: { id: SectionId }) {
   const t = useTranslations('sections')
   return (
     <header className="mb-10">
-      <p className="font-sans text-[11px] uppercase tracking-[0.4em] text-accent">
+      <p className="font-sans text-[11px] uppercase tracking-[0.4em] text-accent-bright">
         {t(`${id}.number`)} — {t(`${id}.title`)}
       </p>
     </header>

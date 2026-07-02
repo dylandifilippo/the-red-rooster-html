@@ -6,6 +6,7 @@
   --color-ink: #ece5da;
   --color-ink-muted: #a89f92;
   --color-accent: #c8452e;
+  --color-accent-bright: #e05c42;
   --color-hairline: rgb(236 229 218 / 0.18);
   --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
   --font-serif-display: var(--font-playfair), ui-serif, Georgia, serif;
@@ -28,4 +29,8 @@ body {
 ::selection {
   background: var(--color-accent);
   color: #fff;
+}
+
+section[id] {
+  scroll-margin-top: 5.5rem;
 }

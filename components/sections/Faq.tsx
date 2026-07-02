@@ -29,7 +29,7 @@ export function Faq() {
                     className="flex w-full items-baseline justify-between gap-6 py-5 text-left"
                   >
                     <span className="font-serif-display text-lg">{t(`items.${id}.question`)}</span>
-                    <span aria-hidden className="font-sans text-accent">{open ? '−' : '+'}</span>
+                    <span aria-hidden className="font-sans text-accent-bright">{open ? '−' : '+'}</span>
                   </button>
                   <div id={`faq-${id}`} hidden={!open} className="pb-6">
                     <p className="font-sans text-sm leading-relaxed text-ink-muted">{t(`items.${id}.answer`)}</p>
