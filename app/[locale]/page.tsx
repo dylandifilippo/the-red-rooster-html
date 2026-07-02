@@ -1,10 +1,38 @@
 import { setRequestLocale } from 'next-intl/server'
-import { useTranslations } from 'next-intl'
 import { use } from 'react'
+import { Nav } from '@/components/ui/Nav'
+import { Footer } from '@/components/ui/Footer'
+import { Hero } from '@/components/sections/Hero'
+import { About } from '@/components/sections/About'
+import { Programs } from '@/components/sections/Programs'
+import { Instructors } from '@/components/sections/Instructors'
+import { Schedule } from '@/components/sections/Schedule'
+import { Faq } from '@/components/sections/Faq'
+import { Pricing } from '@/components/sections/Pricing'
+import { Contact } from '@/components/sections/Contact'
+import { buildLocalBusinessJsonLd } from '@/lib/jsonld'
 
 export default function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = use(params)
   setRequestLocale(locale)
-  const t = useTranslations('meta')
-  return <main className="p-10 font-serif-display text-3xl">{t('title')}</main>
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildLocalBusinessJsonLd()) }}
+      />
+      <Nav />
+      <main>
+        <Hero />
+        <About />
+        <Programs />
+        <Instructors />
+        <Schedule />
+        <Faq />
+        <Pricing />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  )
 }
