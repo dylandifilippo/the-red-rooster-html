@@ -14,7 +14,7 @@ export function About() {
           <div>
             <p className="font-sans text-sm leading-relaxed text-ink-muted">{t('body')}</p>
             <div className="mt-8">
-              <Image src="/images/signature.png" alt={ta('signatureAlt')} width={140} height={60} className="opacity-80" />
+              <Image src="/images/signature.png" alt={ta('signatureAlt')} width={140} height={44} className="opacity-80" />
               <p className="mt-2 font-serif-display text-lg">{t('signatureName')}</p>
               <p className="font-sans text-[10px] uppercase tracking-[0.25em] text-ink-muted">{t('signatureRole')}</p>
             </div>

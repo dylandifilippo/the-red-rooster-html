@@ -19,7 +19,7 @@ export function Hero() {
         </div>
       </div>
       <figure className="relative">
-        <Image src="/images/hero.jpg" alt={ta('heroAlt')} width={900} height={600} priority className="h-auto w-full object-cover" />
+        <Image src="/images/hero.jpg" alt={ta('heroAlt')} width={1920} height={1080} priority className="h-auto w-full object-cover" />
         <figcaption className="absolute -bottom-3 -left-3 bg-accent px-4 py-2 font-sans text-[10px] uppercase tracking-[0.25em] text-white">
           {t('photoTag')}
         </figcaption>
