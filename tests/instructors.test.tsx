@@ -40,6 +40,15 @@ describe('Instructors', () => {
     expect(screen.getAllByRole('img')).toHaveLength(3)
   })
 
+  it('keeps full 3:4 portraits with top anchoring (belts stay visible)', () => {
+    setup()
+    for (const img of screen.getAllByRole('img')) {
+      expect(img.className).toContain('aspect-[3/4]')
+      expect(img.className).toContain('object-cover')
+      expect(img.className).toContain('object-top')
+    }
+  })
+
   it('renders credential text for members that have creds', () => {
     setup()
     for (const cred of fr.team.pierre.creds) {
