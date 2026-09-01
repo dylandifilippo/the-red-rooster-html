@@ -28,7 +28,7 @@ export interface PriceCard {
 }
 
 export interface PricingGroup {
-  id: 'adults' | 'kids'
+  id: 'adults' | 'kids' | 'lutte'
   cards: PriceCard[]
 }
 

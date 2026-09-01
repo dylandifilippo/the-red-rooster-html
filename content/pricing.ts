@@ -10,6 +10,13 @@ export const pricing: PricingGroup[] = [
     ],
   },
   {
+    id: 'lutte',
+    cards: [
+      { id: 'single', price: 7 },
+      { id: 'monthly', price: 60 },
+    ],
+  },
+  {
     id: 'kids',
     cards: [
       { id: 'single', price: 5 },

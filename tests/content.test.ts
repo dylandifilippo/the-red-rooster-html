@@ -37,8 +37,10 @@ describe('content integrity', () => {
   })
   it('pricing matches current rates', () => {
     const adults = pricing.find((g) => g.id === 'adults')
+    const lutte = pricing.find((g) => g.id === 'lutte')
     const kids = pricing.find((g) => g.id === 'kids')
     expect(adults?.cards.map((c) => c.price)).toEqual([7, 60, 80])
+    expect(lutte?.cards.map((c) => c.price)).toEqual([7, 60])
     expect(kids?.cards.map((c) => c.price)).toEqual([5, 40])
   })
   it('has 10 unique faq ids', () => {
