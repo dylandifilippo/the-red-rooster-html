@@ -20,17 +20,36 @@ describe('Pricing section', () => {
     expect(screen.queryByText(/Nº/)).not.toBeInTheDocument()
   })
 
-  it('renders every price from content/pricing.ts, none dropped', () => {
+  it('gives every price in content/pricing.ts its own tile, in content order', () => {
+    // Asserting per tile rather than over the whole section: two groups can
+    // quote the same amount (adults' 10-class card and lutte's month are both
+    // 60), so a substring search over the rendered text would still pass with
+    // one of them missing.
     const { container } = setup()
-    const text = container.textContent ?? ''
-    for (const group of pricing) {
-      for (const card of group.cards) {
-        expect(
-          text.includes(`${card.price}${fr.pricing.currency}`),
-          `expected ${group.id}.${card.id} (${card.price}) to render`,
-        ).toBe(true)
-      }
-    }
+    const grid = container.querySelector('#pricing .grid')
+    const cards = pricing.flatMap((g) => g.cards.map((c) => ({ group: g, card: c })))
+    const tiles = Array.from(grid?.children ?? [])
+    expect(tiles).toHaveLength(cards.length + 1) // + the free-trial tile
+
+    cards.forEach(({ group, card }, i) => {
+      const tile = tiles[i + 1].textContent ?? ''
+      const where = `${group.id}.${card.id}`
+      expect(tile, where).toContain(`${card.price}${fr.pricing.currency}`)
+      expect(tile, where).toContain(fr.pricing[group.id].title)
+    })
+  })
+
+  it('sets no price or label in type smaller than the tile label size', () => {
+    const { container } = setup()
+    const section = container.querySelector('#pricing')
+    // Walk every element instead of using an attribute selector: jsdom's
+    // parser silently matches nothing for [class*="text-["], which made an
+    // earlier version of this test pass against 14px type.
+    const small = Array.from(section?.querySelectorAll('*') ?? []).filter((el) => {
+      const px = /text-\[(\d+)px\]/.exec(String(el.className))
+      return px !== null && Number(px[1]) < 16
+    })
+    expect(small.map((el) => el.textContent)).toEqual([])
   })
 
   it('renders the free trial tile from messages', () => {
