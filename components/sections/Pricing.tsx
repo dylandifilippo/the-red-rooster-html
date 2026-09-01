@@ -8,11 +8,21 @@ import { Reveal } from '@/lib/motion/Reveal'
  * price set in smaller type under the grid reads as fine print, so the grid
  * is the only place a price ever appears, and all tiles share one treatment.
  */
+/**
+ * Widest column count the grid ever uses. An empty grid cell shows the
+ * container background, which here is the 2px rule colour, so a short last
+ * row would render as a light grey block among the tiles. Padding the count
+ * out to a multiple of this also satisfies the 2-column breakpoint, and one
+ * column can never leave a hole, so the pads are hidden below `sm`.
+ */
+const LG_COLUMNS = 4
+
 export function Pricing() {
   const t = useTranslations('pricing')
   const tiles = pricing.flatMap((group) =>
     group.cards.map((card) => ({ key: `${group.id}-${card.id}`, group, card })),
   )
+  const pads = (LG_COLUMNS - ((tiles.length + 1) % LG_COLUMNS)) % LG_COLUMNS
 
   return (
     <section id="pricing" className="border-t-2 border-ink bg-ink py-24 text-paper lg:py-32">
@@ -39,6 +49,9 @@ export function Pricing() {
                 </p>
                 <p className="text-[16px] text-paper-muted">{t(`${group.id}.title`)}</p>
               </div>
+            ))}
+            {Array.from({ length: pads }, (_, i) => (
+              <div key={`pad-${i}`} aria-hidden className="hidden bg-ink sm:block" />
             ))}
           </div>
         </Reveal>

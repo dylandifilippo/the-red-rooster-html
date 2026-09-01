@@ -62,12 +62,12 @@
     },
     "sebastien": {
       "name": "Sébastien",
-      "role": "Instructeur volwassenen, BJJ & Grappling",
+      "role": "Instructeur zwarte band",
       "creds": []
     },
     "mike": {
       "name": "Mike",
-      "role": "Assistent-instructeur, BJJ & Grappling",
+      "role": "Instructeur zwarte band",
       "creds": [
         "Meervoudig IBJJF-medaillewinnaar",
         "Nummer 1 van de wereld, bruine band Master"
@@ -99,7 +99,8 @@
     "monday": "Maandag",
     "tuesday": "Dinsdag",
     "wednesday": "Woensdag",
-    "friday": "Vrijdag"
+    "friday": "Vrijdag",
+    "sunday": "Zondag"
   },
   "schedule": {
     "heading": "Een typische week",

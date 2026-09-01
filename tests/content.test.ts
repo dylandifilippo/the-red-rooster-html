@@ -33,14 +33,14 @@ describe('content integrity', () => {
       { programId: 'bjj-kids', start: '18:30', end: '19:30' },
       { programId: 'bjj-adults', start: '19:30', end: '21:00' },
     ])
-    expect(schedule.map((d) => d.day)).toEqual(['monday', 'tuesday', 'wednesday', 'friday'])
+    expect(schedule.map((d) => d.day)).toEqual(['monday', 'tuesday', 'wednesday', 'friday', 'sunday'])
   })
   it('pricing matches current rates', () => {
     const adults = pricing.find((g) => g.id === 'adults')
     const lutte = pricing.find((g) => g.id === 'lutte')
     const kids = pricing.find((g) => g.id === 'kids')
     expect(adults?.cards.map((c) => c.price)).toEqual([7, 60, 80])
-    expect(lutte?.cards.map((c) => c.price)).toEqual([7, 60])
+    expect(lutte?.cards.map((c) => c.price)).toEqual([7])
     expect(kids?.cards.map((c) => c.price)).toEqual([5, 40])
   })
   it('has 10 unique faq ids', () => {

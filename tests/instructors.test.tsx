@@ -5,7 +5,7 @@ import fr from '../messages/fr.json'
 import { Instructors } from '../components/sections/Instructors'
 
 function setup() {
-  render(
+  return render(
     <NextIntlClientProvider locale="fr" messages={fr}>
       <Instructors />
     </NextIntlClientProvider>,
@@ -25,11 +25,17 @@ describe('Instructors', () => {
   })
 
   it('renders all four team members with name and role', () => {
-    setup()
-    for (const id of ['pierre', 'sebastien', 'mike', 'hugues'] as const) {
-      expect(screen.getByText(fr.team[id].name)).toBeInTheDocument()
-      expect(screen.getByText(fr.team[id].role)).toBeInTheDocument()
-    }
+    // Scoped per card rather than a global getByText: two instructors can
+    // share a role wording (Sebastien and Mike are both "Instructeur ceinture
+    // noire"), and a global query throws on multiple matches.
+    const { container } = setup()
+    const cards = Array.from(container.querySelectorAll('figure'))
+    const ids = ['pierre', 'sebastien', 'mike', 'hugues'] as const
+    expect(cards).toHaveLength(ids.length)
+    ids.forEach((id, i) => {
+      expect(cards[i].textContent, id).toContain(fr.team[id].name)
+      expect(cards[i].textContent, id).toContain(fr.team[id].role)
+    })
   })
 
   it('renders a portrait image with alt text for every member', () => {

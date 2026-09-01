@@ -62,12 +62,12 @@
     },
     "sebastien": {
       "name": "Sébastien",
-      "role": "Adults Instructor, BJJ & Grappling",
+      "role": "Black Belt Instructor",
       "creds": []
     },
     "mike": {
       "name": "Mike",
-      "role": "Assistant Instructor, BJJ & Grappling",
+      "role": "Black Belt Instructor",
       "creds": [
         "Multiple-time IBJJF medallist",
         "World No. 1 brown belt Master"
@@ -99,7 +99,8 @@
     "monday": "Monday",
     "tuesday": "Tuesday",
     "wednesday": "Wednesday",
-    "friday": "Friday"
+    "friday": "Friday",
+    "sunday": "Sunday"
   },
   "schedule": {
     "heading": "A typical week",

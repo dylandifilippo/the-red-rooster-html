@@ -29,10 +29,12 @@ describe('Pricing section', () => {
     const grid = container.querySelector('#pricing .grid')
     const cards = pricing.flatMap((g) => g.cards.map((c) => ({ group: g, card: c })))
     const tiles = Array.from(grid?.children ?? [])
-    expect(tiles).toHaveLength(cards.length + 1) // + the free-trial tile
+    // trial tile, then one tile per card, then any aria-hidden row pads.
+    const real = tiles.filter((el) => !el.hasAttribute('aria-hidden'))
+    expect(real).toHaveLength(cards.length + 1)
 
     cards.forEach(({ group, card }, i) => {
-      const tile = tiles[i + 1].textContent ?? ''
+      const tile = real[i + 1].textContent ?? ''
       const where = `${group.id}.${card.id}`
       expect(tile, where).toContain(`${card.price}${fr.pricing.currency}`)
       expect(tile, where).toContain(fr.pricing[group.id].title)
@@ -50,6 +52,16 @@ describe('Pricing section', () => {
       return px !== null && Number(px[1]) < 16
     })
     expect(small.map((el) => el.textContent)).toEqual([])
+  })
+
+  it('leaves no hole in the tile grid at 4 or 2 columns', () => {
+    // An empty cell would show the container background (the rule colour) as
+    // a grey block, so the component pads the last row. Guards future edits
+    // to content/pricing.ts, which change the tile count.
+    const { container } = setup()
+    const cells = container.querySelector('#pricing .grid')?.children.length ?? 0
+    expect(cells % 4, `${cells} cells do not fill 4 columns`).toBe(0)
+    expect(cells % 2, `${cells} cells do not fill 2 columns`).toBe(0)
   })
 
   it('renders the free trial tile from messages', () => {

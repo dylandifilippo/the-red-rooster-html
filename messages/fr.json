@@ -62,12 +62,12 @@
     },
     "sebastien": {
       "name": "Sébastien",
-      "role": "Instructeur adultes, BJJ & Grappling",
+      "role": "Instructeur ceinture noire",
       "creds": []
     },
     "mike": {
       "name": "Mike",
-      "role": "Instructeur assistant, BJJ & Grappling",
+      "role": "Instructeur ceinture noire",
       "creds": [
         "Plusieurs fois médaillé IBJJF",
         "N°1 mondial, ceinture marron Master"
@@ -99,7 +99,8 @@
     "monday": "Lundi",
     "tuesday": "Mardi",
     "wednesday": "Mercredi",
-    "friday": "Vendredi"
+    "friday": "Vendredi",
+    "sunday": "Dimanche"
   },
   "schedule": {
     "heading": "La semaine type",

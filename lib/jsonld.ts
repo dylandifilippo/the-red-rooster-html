@@ -7,6 +7,7 @@ const DAY_NAMES: Record<Weekday, string> = {
   tuesday: 'Tuesday',
   wednesday: 'Wednesday',
   friday: 'Friday',
+  sunday: 'Sunday',
 }
 
 export function buildLocalBusinessJsonLd() {
