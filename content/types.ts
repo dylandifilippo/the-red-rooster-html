@@ -7,7 +7,7 @@ export interface Program {
 }
 
 export interface Instructor {
-  id: 'pierre' | 'sebastien' | 'mike'
+  id: 'pierre' | 'sebastien' | 'mike' | 'hugues'
   image: string
 }
 

@@ -55,7 +55,9 @@
       "name": "Pierre",
       "role": "Professor BJJ & Grappling",
       "creds": [
-        "Zwarte band (1e graad) Braziliaans Jiu-Jitsu onder Grootmeester Flavio Behring"
+        "Zwarte band (1e graad) Braziliaans Jiu-Jitsu onder Grootmeester Flavio Behring",
+        "Meervoudig medaillewinnaar NAGA en IBJJF",
+        "3e op het Europees BJJ-kampioenschap, bruine band Master"
       ]
     },
     "sebastien": {
@@ -66,7 +68,20 @@
     "mike": {
       "name": "Mike",
       "role": "Assistent-instructeur, BJJ & Grappling",
-      "creds": []
+      "creds": [
+        "Meervoudig IBJJF-medaillewinnaar",
+        "Nummer 1 van de wereld, bruine band Master"
+      ]
+    },
+    "hugues": {
+      "name": "Hugues",
+      "role": "Instructeur Worstelen",
+      "creds": [
+        "Internationaal worstelaar voor Zuid-Afrika, Grieks-Romeins & vrije stijl",
+        "Zilver op de Commonwealth Games (Delhi 2010, 96 kg Grieks-Romeins)",
+        "3× medaille op de Afrikaanse kampioenschappen (Dakar 2011, Tunis 2008, Pretoria 2006)",
+        "3× medaille op de Commonwealth-kampioenschappen (Jalandhar 2009, Londen 2007, Stellenbosch 2005)"
+      ]
     }
   },
   "gallery": {

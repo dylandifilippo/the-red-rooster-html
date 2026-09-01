@@ -55,7 +55,9 @@
       "name": "Pierre",
       "role": "Professor, BJJ & Grappling",
       "creds": [
-        "Black belt (1st degree) in Brazilian Jiu-Jitsu under Grandmaster Flavio Behring"
+        "Black belt (1st degree) in Brazilian Jiu-Jitsu under Grandmaster Flavio Behring",
+        "Multiple-time NAGA and IBJJF medallist",
+        "3rd at the European BJJ Championship, brown belt Master"
       ]
     },
     "sebastien": {
@@ -66,7 +68,20 @@
     "mike": {
       "name": "Mike",
       "role": "Assistant Instructor, BJJ & Grappling",
-      "creds": []
+      "creds": [
+        "Multiple-time IBJJF medallist",
+        "World No. 1 brown belt Master"
+      ]
+    },
+    "hugues": {
+      "name": "Hugues",
+      "role": "Wrestling Instructor",
+      "creds": [
+        "International wrestler for South Africa, Greco-Roman & freestyle",
+        "Commonwealth Games silver medallist (Delhi 2010, 96 kg Greco-Roman)",
+        "3× African Championships medallist (Dakar 2011, Tunis 2008, Pretoria 2006)",
+        "3× Commonwealth Championships medallist (Jalandhar 2009, London 2007, Stellenbosch 2005)"
+      ]
     }
   },
   "gallery": {

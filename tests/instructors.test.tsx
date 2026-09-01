@@ -24,9 +24,9 @@ describe('Instructors', () => {
     expect(screen.queryByText('Les Instructeurs')).not.toBeInTheDocument()
   })
 
-  it('renders all three team members with name and role', () => {
+  it('renders all four team members with name and role', () => {
     setup()
-    for (const id of ['pierre', 'sebastien', 'mike'] as const) {
+    for (const id of ['pierre', 'sebastien', 'mike', 'hugues'] as const) {
       expect(screen.getByText(fr.team[id].name)).toBeInTheDocument()
       expect(screen.getByText(fr.team[id].role)).toBeInTheDocument()
     }
@@ -34,10 +34,10 @@ describe('Instructors', () => {
 
   it('renders a portrait image with alt text for every member', () => {
     setup()
-    for (const id of ['pierre', 'sebastien', 'mike'] as const) {
+    for (const id of ['pierre', 'sebastien', 'mike', 'hugues'] as const) {
       expect(screen.getByAltText(fr.team[id].name)).toBeInTheDocument()
     }
-    expect(screen.getAllByRole('img')).toHaveLength(3)
+    expect(screen.getAllByRole('img')).toHaveLength(4)
   })
 
   it('keeps full 3:4 portraits with top anchoring (belts stay visible)', () => {

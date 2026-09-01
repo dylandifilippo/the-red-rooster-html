@@ -3,15 +3,43 @@ import { useTranslations } from 'next-intl'
 import { team } from '@/content/team'
 import { Reveal } from '@/lib/motion/Reveal'
 
+/**
+ * Divider classes for one cell of the instructor grid (1 col -> 2 cols at
+ * sm -> 4 cols at lg). `divide-*` cannot express this: on a wrapping grid
+ * it walks DOM order, so it draws a left edge on the cell that starts a
+ * new row. Each cell therefore carries its own borders, and every side is
+ * given exactly one value per breakpoint, never two competing utilities
+ * whose winner would depend on stylesheet order rather than class order.
+ */
+function cellBorders(i: number, count: number) {
+  return [
+    'border-ink',
+    // 1 col: a rule above every cell but the first.
+    i === 0 ? '' : 'border-t-2',
+    // 2 cols: rule above the second row only; right edge on the left column.
+    i < 2 ? 'sm:border-t-0' : 'sm:border-t-2',
+    i % 2 === 0 ? 'sm:border-r-2' : 'sm:border-r-0',
+    // 4 cols: single row, so right edges only, none after the last cell.
+    'lg:border-t-0',
+    i === count - 1 ? 'lg:border-r-0' : 'lg:border-r-2',
+  ]
+    .filter(Boolean)
+    .join(' ')
+}
+
 export function Instructors() {
   const t = useTranslations('team')
   return (
     <section id="instructors" className="border-t-2 border-ink py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <h2 className="font-poster text-[clamp(34px,4.4vw,64px)] text-ink">{t('heading')}</h2>
-        <div className="mt-12 grid border-2 border-ink divide-y-2 divide-ink lg:grid-cols-3 lg:divide-y-0 lg:divide-x-2">
+        <div className="mt-12 grid border-2 border-ink sm:grid-cols-2 lg:grid-cols-4">
           {team.map((m, i) => (
-            <Reveal key={m.id} className="h-full" delay={i * 0.08}>
+            <Reveal
+              key={m.id}
+              className={`h-full ${cellBorders(i, team.length)}`}
+              delay={i * 0.08}
+            >
               <figure className="flex h-full flex-col bg-white">
                 <Image
                   src={m.image}

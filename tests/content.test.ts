@@ -13,8 +13,8 @@ describe('content integrity', () => {
   it('has the four programs, no judo', () => {
     expect(programs.map((p) => p.id)).toEqual(['bjj-adults', 'bjj-kids', 'grappling', 'lutte'])
   })
-  it('has the three instructors', () => {
-    expect(team.map((m) => m.id)).toEqual(['pierre', 'sebastien', 'mike'])
+  it('has the four instructors', () => {
+    expect(team.map((m) => m.id)).toEqual(['pierre', 'sebastien', 'mike', 'hugues'])
   })
   it('schedule slots use HH:MM and known programs', () => {
     for (const day of schedule) {

@@ -55,7 +55,9 @@
       "name": "Pierre",
       "role": "Professeur BJJ & Grappling",
       "creds": [
-        "Ceinture noire (1ᵉʳ degré) de Jiu-Jitsu Brésilien sous le Grand-Maître Flavio Behring"
+        "Ceinture noire (1ᵉʳ degré) de Jiu-Jitsu Brésilien sous le Grand-Maître Flavio Behring",
+        "Plusieurs fois médaillé NAGA et IBJJF",
+        "3ᵉ au Championnat d'Europe de BJJ, ceinture marron Master"
       ]
     },
     "sebastien": {
@@ -66,7 +68,20 @@
     "mike": {
       "name": "Mike",
       "role": "Instructeur assistant, BJJ & Grappling",
-      "creds": []
+      "creds": [
+        "Plusieurs fois médaillé IBJJF",
+        "N°1 mondial ceinture marron Master"
+      ]
+    },
+    "hugues": {
+      "name": "Hugues",
+      "role": "Instructeur Lutte",
+      "creds": [
+        "International de lutte pour l'Afrique du Sud, gréco-romaine & libre",
+        "Vice-champion des Jeux du Commonwealth (Delhi 2010, 96 kg gréco-romaine)",
+        "3× médaillé aux Championnats d'Afrique (Dakar 2011, Tunis 2008, Pretoria 2006)",
+        "3× médaillé aux Championnats du Commonwealth (Jalandhar 2009, Londres 2007, Stellenbosch 2005)"
+      ]
     }
   },
   "gallery": {
