@@ -12,6 +12,18 @@ function pngSize(buf: Buffer): { width: number; height: number } {
 }
 
 /**
+ * The sizes packed into an .ico, from its directory. A byte of 0 means 256,
+ * which is the only size that does not fit in the byte.
+ */
+function icoSizes(buf: Buffer): string[] {
+  const count = buf.readUInt16LE(4)
+  return Array.from({ length: count }, (_, i) => {
+    const entry = 6 + i * 16
+    return `${buf[entry] || 256}x${buf[entry + 1] || 256}`
+  })
+}
+
+/**
  * Width and height straight out of the JPEG frame header. Reading the file is
  * the whole point of the tests below: the numbers in lib/seo.ts are what
  * scrapers trust, and nothing else would notice if the asset were replaced by
@@ -73,6 +85,13 @@ describe('social and canonical metadata', () => {
     ['app/icon.png', 192],
   ])('%s is a square %ipx app icon', (file, size) => {
     expect(pngSize(readFileSync(file))).toEqual({ width: size, height: size })
+  })
+
+  it('packs the small sizes browsers actually draw into the favicon', () => {
+    // A single 256px entry makes a browser downscale a detailed badge to 16px
+    // itself, which smears it. Shipping the small sizes lets it pick one.
+    const sizes = icoSizes(readFileSync('app/favicon.ico'))
+    expect(sizes).toEqual(expect.arrayContaining(['16x16', '32x32', '48x48']))
   })
 
   it('has share-card alt text in every catalog', () => {
