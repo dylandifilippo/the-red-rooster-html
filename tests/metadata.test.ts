@@ -6,9 +6,14 @@ import fr from '../messages/fr.json'
 import nl from '../messages/nl.json'
 import en from '../messages/en.json'
 
+/** PNG puts the frame size at a fixed offset in the IHDR chunk. */
+function pngSize(buf: Buffer): { width: number; height: number } {
+  return { width: buf.readUInt32BE(16), height: buf.readUInt32BE(20) }
+}
+
 /**
  * Width and height straight out of the JPEG frame header. Reading the file is
- * the whole point of the test below: the numbers in lib/seo.ts are what
+ * the whole point of the tests below: the numbers in lib/seo.ts are what
  * scrapers trust, and nothing else would notice if the asset were replaced by
  * one of a different size.
  */
@@ -58,6 +63,16 @@ describe('social and canonical metadata', () => {
     expect(localePath('fr')).toBe('/')
     expect(localePath('nl')).toBe('/nl')
     expect(localePath('en')).toBe('/en')
+  })
+
+  // Next picks these up by filename, so nothing imports them and nothing
+  // would fail if one were the wrong shape. A home-screen icon that is not
+  // square gets stretched by the OS.
+  it.each([
+    ['app/apple-icon.png', 180],
+    ['app/icon.png', 192],
+  ])('%s is a square %ipx app icon', (file, size) => {
+    expect(pngSize(readFileSync(file))).toEqual({ width: size, height: size })
   })
 
   it('has share-card alt text in every catalog', () => {
