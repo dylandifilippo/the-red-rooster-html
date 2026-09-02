@@ -5,7 +5,18 @@ export type TimetableCell = ClassSlot | null
 
 export interface TimetableRow {
   start: string
+  /**
+   * The end time shared by every slot on the row, or null when they differ.
+   * The row header speaks for a whole row, so it can only carry an end time
+   * that holds for all of it; a mixed row falls back to the start alone.
+   */
+  end: string | null
   cells: TimetableCell[]
+}
+
+/** One spelling of a time span, so the table and the cards cannot diverge. */
+export function timeRange(start: string, end: string | null): string {
+  return end ? `${start} - ${end}` : start
 }
 
 /**
@@ -31,10 +42,11 @@ export function timetableRows(schedule: DaySchedule[] = scheduleContent): Timeta
   }
 
   const starts = [...new Set(schedule.flatMap((d) => d.slots.map((s) => s.start)))].sort()
-  return starts.map((start) => ({
-    start,
-    cells: schedule.map((day) => day.slots.find((s) => s.start === start) ?? null),
-  }))
+  return starts.map((start) => {
+    const cells = schedule.map((day) => day.slots.find((s) => s.start === start) ?? null)
+    const ends = new Set(cells.flatMap((c) => (c ? [c.end] : [])))
+    return { start, end: ends.size === 1 ? [...ends][0] : null, cells }
+  })
 }
 
 /** BJJ Kids sessions get the ink fill in the poster timetable; every other

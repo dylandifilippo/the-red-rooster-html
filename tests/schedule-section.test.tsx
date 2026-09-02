@@ -3,7 +3,7 @@ import { describe, it, expect } from 'vitest'
 import { NextIntlClientProvider } from 'next-intl'
 import fr from '../messages/fr.json'
 import { schedule } from '../content/schedule'
-import { timetableRows } from '../lib/timetable'
+import { timetableRows, timeRange } from '../lib/timetable'
 import { Schedule } from '../components/sections/Schedule'
 
 function setup() {
@@ -33,7 +33,8 @@ describe('Schedule section', () => {
     expect(within(table).queryByText('Jeudi')).not.toBeInTheDocument()
 
     for (const row of rows) {
-      expect(within(table).getByRole('rowheader', { name: row.start })).toBeInTheDocument()
+      const label = timeRange(row.start, row.end)
+      expect(within(table).getByRole('rowheader', { name: label })).toBeInTheDocument()
     }
   })
 
@@ -48,9 +49,13 @@ describe('Schedule section', () => {
       expect(dayIndex).toBeGreaterThan(-1)
 
       for (const slot of day.slots) {
-        const rowHeader = within(table).getByRole('rowheader', { name: slot.start })
-        const row = rowHeader.parentElement!
-        const cell = row.children[dayIndex]
+        // Addressed by the row's own label: the header carries the end time
+        // shared by the whole row, which is not necessarily this slot's.
+        const row = timetableRows().find((r) => r.start === slot.start)!
+        const rowHeader = within(table).getByRole('rowheader', {
+          name: timeRange(row.start, row.end),
+        })
+        const cell = rowHeader.parentElement!.children[dayIndex]
         expect(cell?.textContent).toBe(fr.programs[slot.programId].title)
       }
     })
@@ -69,7 +74,9 @@ describe('Schedule section', () => {
     const { container } = setup()
     const mobile = container.querySelector('.lg\\:hidden') as HTMLElement
     schedule.forEach((day) => {
-      const expectedStarts = [...day.slots].map((s) => s.start).sort()
+      const expectedStarts = [...day.slots]
+        .sort((a, b) => a.start.localeCompare(b.start))
+        .map((s) => timeRange(s.start, s.end))
       const dayCard = within(mobile)
         .getAllByText(fr.days[day.day])
         .map((el) => el.closest('div'))

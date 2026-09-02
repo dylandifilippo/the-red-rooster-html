@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { schedule } from '../content/schedule'
-import { timetableRows, isKidsSlot } from '../lib/timetable'
+import { timetableRows, isKidsSlot, timeRange } from '../lib/timetable'
 import type { DaySchedule } from '../content/types'
 
 describe('timetableRows', () => {
@@ -35,6 +35,25 @@ describe('timetableRows', () => {
         expect(cell !== null).toBe(hasSlot)
       })
     }
+  })
+})
+
+describe('timetableRows end times', () => {
+  it('carries the end time when every slot on the row agrees', () => {
+    for (const row of timetableRows()) {
+      const ends = new Set(row.cells.flatMap((c) => (c ? [c.end] : [])))
+      expect(row.end, row.start).toBe(ends.size === 1 ? [...ends][0] : null)
+    }
+  })
+
+  it('drops the end time when two days share a start but not an end', () => {
+    const mixed: DaySchedule[] = [
+      { day: 'monday', slots: [{ programId: 'bjj-kids', start: '18:30', end: '19:30' }] },
+      { day: 'tuesday', slots: [{ programId: 'lutte', start: '18:30', end: '20:00' }] },
+    ]
+    const [row] = timetableRows(mixed)
+    expect(row.end).toBeNull()
+    expect(timeRange(row.start, row.end)).toBe('18:30')
   })
 })
 

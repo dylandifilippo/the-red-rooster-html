@@ -41,7 +41,7 @@ describe('content integrity', () => {
     const kids = pricing.find((g) => g.id === 'kids')
     expect(adults?.cards.map((c) => c.price)).toEqual([7, 60, 80])
     expect(lutte?.cards.map((c) => c.price)).toEqual([7])
-    expect(kids?.cards.map((c) => c.price)).toEqual([5, 40])
+    expect(kids?.cards.map((c) => c.price)).toEqual([6, 50])
   })
   it('has 10 unique faq ids', () => {
     expect(faqIds).toHaveLength(10)

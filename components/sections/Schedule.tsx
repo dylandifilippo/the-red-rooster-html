@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl'
 import { schedule } from '@/content/schedule'
 import type { ClassSlot } from '@/content/types'
-import { timetableRows, isKidsSlot } from '@/lib/timetable'
+import { timetableRows, isKidsSlot, timeRange } from '@/lib/timetable'
 import { TimetableSweep } from '@/lib/motion/TimetableSweep'
 
 // Kids sessions get the ink fill, every other program (adults, grappling,
@@ -59,7 +59,7 @@ export function Schedule() {
                     scope="row"
                     className="border-r-2 border-ink px-4 py-5 text-left font-mono text-[15px] font-semibold"
                   >
-                    {row.start}
+                    {timeRange(row.start, row.end)}
                   </th>
                   {row.cells.map((slot, i) => (
                     <td
@@ -97,7 +97,7 @@ export function Schedule() {
                       key={`${slot.programId}-${slot.start}`}
                       className={`flex items-center justify-between gap-4 px-4 py-3 text-[14.5px] ${fillClass(slot)}`}
                     >
-                      <span className="font-mono font-semibold">{slot.start}</span>
+                      <span className="font-mono font-semibold">{timeRange(slot.start, slot.end)}</span>
                       <span className="font-bold">{tPrograms(`${slot.programId}.title`)}</span>
                     </li>
                   ))}
