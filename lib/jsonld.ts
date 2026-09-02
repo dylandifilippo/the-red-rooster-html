@@ -1,6 +1,19 @@
 import { schedule } from '@/content/schedule'
 import { contact } from '@/content/contact'
+import { pricing } from '@/content/pricing'
 import type { Weekday } from '@/content/types'
+
+const SITE = 'https://theredroosteracademy.com'
+
+/**
+ * Google shows this in the local-business panel. Derived from
+ * content/pricing.ts rather than written out, so it cannot drift from the
+ * rates the Pricing section renders.
+ */
+function priceRange(): string {
+  const prices = pricing.flatMap((g) => g.cards.map((c) => c.price))
+  return `${Math.min(...prices)} EUR-${Math.max(...prices)} EUR`
+}
 
 const DAY_NAMES: Record<Weekday, string> = {
   monday: 'Monday',
@@ -14,10 +27,12 @@ export function buildLocalBusinessJsonLd() {
   return {
     '@context': 'https://schema.org',
     '@type': 'SportsActivityLocation',
+    '@id': `${SITE}/#academy`,
     name: 'The Red Rooster Academy',
-    url: 'https://theredroosteracademy.com',
+    url: SITE,
+    priceRange: priceRange(),
     telephone: contact.phone,
-    image: 'https://theredroosteracademy.com/images/hero.jpg',
+    image: `${SITE}/images/hero.jpg`,
     address: {
       '@type': 'PostalAddress',
       streetAddress: contact.address.street,
