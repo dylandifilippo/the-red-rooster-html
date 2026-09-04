@@ -100,3 +100,26 @@ Two independent levers, use one or both:
   | AAAA | www  | 2606:50c0:8003::153 | 3600 |
 
   The `www` CNAME to Vercel must be removed before re-adding `www` A records.
+
+## Search engines
+
+- **Google Search Console**: domain property `theredroosteracademy.com`, owner
+  dylan.di.filippo@gmail.com, verified on 2026-09-04 through a TXT record at
+  Combell (`google-site-verification=...`, apex, TTL 600). Keep that TXT record:
+  removing it drops the verification. Sitemap submitted as the full URL
+  `https://theredroosteracademy.com/sitemap.xml`; indexing requested for `/`,
+  `/nl` and `/en`.
+- **Legacy URLs**: `/index.html` and `/images/technique.jpg` (the old site's
+  share image) redirect permanently, see `next.config.ts`. Add to that list if
+  Search Console reports other 404s inherited from the static site.
+- **404s**: unknown paths under a locale render the localized `not-found.tsx`
+  with a 404 status; the HTML shell is filled client-side, which is normal for
+  `notFound()` on a dynamic route and fine for Googlebot.
+
+## Branches after launch
+
+`main` is the only branch that matters. The old site is kept in the tags
+`ancien-site-statique` (last commit of the old `main`) and `ancien-site-gh-pages`
+(last commit of `gh-pages`). Vercel builds every pushed branch, so a push to a
+branch that is not a Next.js app (as `gh-pages` was) fails a preview build; that
+is noise, not a production problem.
