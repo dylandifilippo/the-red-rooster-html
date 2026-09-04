@@ -194,5 +194,10 @@
     "languageSwitcher": "Choisir la langue",
     "logoAlt": "Logo The Red Rooster Academy",
     "heroAlt": "Entraînement de Jiu-Jitsu Brésilien à The Red Rooster Academy"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "body": "Cette page n'existe pas ou a été déplacée.",
+    "back": "Retour à l'accueil"
   }
 }

@@ -194,5 +194,10 @@
     "languageSwitcher": "Taal kiezen",
     "logoAlt": "Logo van The Red Rooster Academy",
     "heroAlt": "Training Braziliaans Jiu-Jitsu bij The Red Rooster Academy"
+  },
+  "notFound": {
+    "title": "Pagina niet gevonden",
+    "body": "Deze pagina bestaat niet of is verplaatst.",
+    "back": "Terug naar de startpagina"
   }
 }

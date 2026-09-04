@@ -194,5 +194,10 @@
     "languageSwitcher": "Choose language",
     "logoAlt": "The Red Rooster Academy logo",
     "heroAlt": "Brazilian Jiu-Jitsu training at The Red Rooster Academy"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "This page does not exist or has moved.",
+    "back": "Back to the home page"
   }
 }
