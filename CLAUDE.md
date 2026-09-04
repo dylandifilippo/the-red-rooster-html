@@ -34,6 +34,8 @@ subagent, in a separate browser window. Never install puppeteer/playwright or
 other headless browser tooling — this is a single-page site.
 
 ## Branches
-`redesign-taste` = active development (Affiche redesign, supersedes `redesign`).
-`gh-pages` = OLD live site (do not touch until DNS cutover — see
-`docs/deployment.md`). `main` = merge target at launch.
+`main` = the live site, deployed to production by Vercel on every push (see
+`docs/deployment.md`). Work on feature branches and merge into `main`.
+`redesign-taste` = historical Affiche redesign branch, now merged into `main`.
+`gh-pages` = OLD GitHub Pages site, kept as a rollback until Dylan says to delete
+it. Tag `ancien-site-statique` marks the last commit of the old static site.
