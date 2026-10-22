@@ -33,7 +33,7 @@ describe('content integrity', () => {
       { programId: 'bjj-kids', start: '18:30', end: '19:30' },
       { programId: 'bjj-adults', start: '19:30', end: '21:00' },
     ])
-    expect(schedule.map((d) => d.day)).toEqual(['monday', 'tuesday', 'wednesday', 'friday', 'sunday'])
+    expect(schedule.map((d) => d.day)).toEqual(['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'sunday'])
   })
   it('pricing matches current rates', () => {
     const adults = pricing.find((g) => g.id === 'adults')

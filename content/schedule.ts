@@ -16,6 +16,7 @@ export const schedule: DaySchedule[] = [
       { programId: 'bjj-adults', start: '19:30', end: '21:00' },
     ],
   },
+  { day: 'thursday', slots: [{ programId: 'lutte', start: '19:30', end: '21:00' }] },
   { day: 'friday', slots: [{ programId: 'bjj-adults', start: '19:30', end: '21:00' }] },
   { day: 'sunday', slots: [{ programId: 'lutte', start: '16:00', end: '17:00' }] },
 ]

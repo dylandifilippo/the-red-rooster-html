@@ -30,7 +30,7 @@ describe('Schedule section', () => {
     for (const day of schedule) {
       expect(within(table).getByRole('columnheader', { name: fr.days[day.day] })).toBeInTheDocument()
     }
-    expect(within(table).queryByText('Jeudi')).not.toBeInTheDocument()
+    expect(within(table).queryByText('Samedi')).not.toBeInTheDocument()
 
     for (const row of rows) {
       const label = timeRange(row.start, row.end)

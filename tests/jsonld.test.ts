@@ -10,9 +10,9 @@ describe('LocalBusiness JSON-LD', () => {
   })
   it('derives opening hours from the schedule data', () => {
     const hours = ld.openingHoursSpecification as Array<Record<string, unknown>>
-    expect(hours).toHaveLength(5)
+    expect(hours).toHaveLength(6)
     expect(hours[0]).toMatchObject({ dayOfWeek: 'Monday', opens: '18:30', closes: '21:00' })
-    expect(hours[4]).toMatchObject({ dayOfWeek: 'Sunday', opens: '16:00', closes: '17:00' })
-    expect(hours.map((h) => h.dayOfWeek)).not.toContain('Thursday')
+    expect(hours[5]).toMatchObject({ dayOfWeek: 'Sunday', opens: '16:00', closes: '17:00' })
+    expect(hours[3]).toMatchObject({ dayOfWeek: 'Thursday', opens: '19:30', closes: '21:00' })
   })
 })

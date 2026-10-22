@@ -1,5 +1,5 @@
 export type ProgramId = 'bjj-adults' | 'bjj-kids' | 'grappling' | 'lutte'
-export type Weekday = 'monday' | 'tuesday' | 'wednesday' | 'friday' | 'sunday'
+export type Weekday = 'monday' | 'tuesday' | 'wednesday' | 'thursday' | 'friday' | 'sunday'
 
 export interface Program {
   id: ProgramId

@@ -19,6 +19,7 @@ const DAY_NAMES: Record<Weekday, string> = {
   monday: 'Monday',
   tuesday: 'Tuesday',
   wednesday: 'Wednesday',
+  thursday: 'Thursday',
   friday: 'Friday',
   sunday: 'Sunday',
 }
